@@ -1,1 +1,24 @@
 
+:root {
+  /* 🎨 Paleta de Cores */
+  --color-bg-primary: #1C1F26;       /* Raisin Black */
+  --color-bg-secondary: #2A2E38;     /* Gun Metal */
+  --color-text-primary: #C4C4C4;     /* Silver Sand */
+  --color-text-muted: #999999;       /* Battleship Gray */
+  --color-accent-gold: #B28B45;      /* Dark Goldenrod */
+  --color-link: #7A1E1E;             /* Falu Red */
+  --color-lore: #4A2C68;             /* Tekhelet */
+
+  /* 🖋️ Tipografia */
+  --font-base: 'EB Garamond', serif;
+  --font-title: 'MedievalSharp', cursive;
+  --font-heading: 'Pirata One', cursive;
+  --font-lore: 'UnifrakturCook', cursive;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-base);
+}
+
