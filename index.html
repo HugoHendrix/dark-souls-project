@@ -47,7 +47,7 @@
         <nav class="navbar">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="conteudo/lore.html">Lore</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
@@ -58,26 +58,28 @@
         <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%">
     </div>
 
-    <!-- SEÇÃO DE BOAS VINDAS -->
-     <section class="container-fluid">
+   <!-- SEÇÃO DE BOAS VINDAS -->
+    <section class="container-fluid">
         <h1>Dark Souls Project</h1>
-        <p class="mensagem-bem-vindo">Bem-vindo! acompanhe sobre os principais temas, ideias e fatos do universo de Dark Souls, com foco no primeiro jogo da franquia. As informações foram compiladas de diversas fontes, incluindo análises aprofundadas da lore, websites oficiais e artigos da Wikipédia.</p>
-        <div class="flex-row">
-            <div class="flex-item">
-                <h3 class="titulo-destaque">Visão Geral da Franquia</h3>
-                <p>Dark Souls é uma aclamada série de RPG de ação e fantasia sombria, desenvolvida pela FromSoftware e publicada pela Bandai Namco Entertainment. Criada por Hidetaka Miyazaki, a série é famosa por sua alta dificuldade e narrativa ambiental, onde a história é contada através de detalhes do cenário, descrições de itens e diálogos com NPCs, exigindo que o jogador “encontre pistas e ligue os pontos para entender a história ao invés de ser contada de forma mais tradicional, como cutscenes.” (Wikipédia).</p>
-                <p> Lançada em 2011, a série gerou duas continuações diretas, Dark Souls II (2014) e Dark Souls III (2016), e é considerada a “sucessora espiritual” de Demon's Souls e King's Field. A franquia vendeu mais de 35 milhões de cópias fora do Japão até 2023 (Wikipédia).</p>
-            </div>
-             <div class="flex-item">
-                <h3 class="titulo-destaque">Dark Souls: Um Breve Briefing</h3>
-                <figure class="figure-estus-flask">
-                    <figcaption class="figcaption-estus-flask">Frasco de Estus contendo líquido dourado luminoso, símbolo de cura no universo Dark Souls.</figcaption>
-                    <img src="/assets/images/estus-flask.png" alt="Frasco dourado brilhante cercado por faíscas e aura flamejante, sugerindo propriedades mágicas." width="265" height="265" class="estus-flask">
-                </figure>
-               
-            </div>
-        </div>
-     </section>
+        <p class="mensagem-bem-vindo">Bem-vindo! acompanhe sobre os principais temas, ideias e fatos do universo de Dark Souls, com foco no primeiro jogo da franquia. As informações foram compiladas de diversas fontes, incluindo análises aprofundadas da lore, websites oficiais e artigos da Wikipédia.</p>    
+
+        <nav class="nav-buttons">
+            <button onclick="loadContent('informacoes-do-jogo')" class="btn btn-souls">Características do Jogo</button>
+            <button onclick="loadContent('lore')" class="btn btn-souls">Lore</button>
+        </nav> 
+    
+        <main id="content-area">
+        </main>
+    </section>
+
+    
+
+
+
+    
+
+  
+     
 
      
 

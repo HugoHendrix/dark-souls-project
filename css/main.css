@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p { 
     margin-bottom: 30px;
-    text-indent: 15px;
+    text-indent: 15px;    
 }
 
 h1 { 
@@ -66,21 +66,43 @@ h3.titulo-destaque::after {
     content: "";
     border: 1px solid var(--color-accent-gold);
     display: block;
+    width: 80%;
 }
 
-.figure-estus-flask {
+ul li {
+    margin-bottom: 1px;
+}
+
+.nav-buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 1rem;
+
 }
 
-img.estus-flask {
-    margin: 0 auto;
+.btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.figcaption-estus-flask {
-  text-align: justify;
-  font-style: italic;
-  color: var(--color-text-muted);
-  margin-top: 10px;
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-souls {
+  background-color: var(--color-lore);
+  color: #fff;
+}
+
+.btn-souls:hover {
+  background-color: var(--color-link);
 }
