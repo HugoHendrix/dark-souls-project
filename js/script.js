@@ -11,7 +11,7 @@ function loadContent(pageName) {
 })
 .then(html => {
     contentArea.innerHTML = html;
-    window.scrollTo({ bottom: 10, behavior: 'smooth' });
+    document.getElementById('nav-anchor').scrollIntoView({ behavior: 'smooth' });
 
 })
 .catch(error => {
@@ -20,3 +20,25 @@ function loadContent(pageName) {
 
 })
 }
+
+// BOTAO DE VOLTAR AO TOPO
+
+// Obtenha o botão
+const backToTopButton = document.getElementById("back-to-top");
+
+// Mostrar ou esconder o botão com base na rolagem
+window.onscroll = function () {
+    if (window.scrollY > 300) { // Mostra após 300px de rolagem
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
+
+// Rolar para o topo quando o botão for clicado
+backToTopButton.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Suaviza o movimento
+    });
+};
