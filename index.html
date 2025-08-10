@@ -16,7 +16,7 @@
     <meta property="og:url" content="">
     <meta property="og:site_name" content="">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:alt" content="">
+    <meta name="twitter:image:loading=" content="">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/header.css">
 
 
-    <link rel="icon" type="image/svg+xml" href="assets/logo/favicon-estus-flask.png">
+    <link rel="icon" type="image/svg+xml" href="./assets/images/logo/favicon-estus-flask.png">
 </head>
 
 <body>
@@ -37,19 +37,18 @@
     <!-- HEADER -->
     <header class="bg-header">
         <a href="/" aria-label="Ir para a Página inicial">
-            <img src="assets/logo/logo-ds.webp" alt="Logo Dark Souls" width="300" height="200">
+            <img src="assets/images/logo/logo-ds.webp" alt="Logo Dark Souls" width="300" height="200">
         </a>
 
         <div class="solaire-container" data-praise="🌞 Praise the Sun! 🌞">
-            <img src="assets/images/solaire-of-astora.png" alt="Solaire de Astora realizando uma saudação ao sol"
-                width="236" height="225">
+            <img src="assets/images/logo/solaire-of-astora.png"                 alt="Solaire de Astora realizando uma saudação ao sol" width="236" height="225">
         </div>
 
         <nav class="navbar">
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="conteudo/lore.html">Lore</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
@@ -57,7 +56,8 @@
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
-        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+        <img src="assets/images/divisor-madeira.png" loading="lazy" alt="Imagem de divisor de madeira" width="100%"
+            loading="lazy">
     </div>
 
     <!-- SEÇÃO DE BOAS VINDAS -->
@@ -69,9 +69,11 @@
 
         <nav id="nav-anchor" class="nav-buttons">
             <button onclick="loadContent('informacoes-do-jogo')" class="btn btn-padrao">Características do Jogo</button>
-            <button onclick="loadContent('lore')" class="btn btn-padrao">Um pouco da Lore - A História não contada</button>
+            <button onclick="loadContent('lore')" class="btn btn-padrao">Um pouco da Lore - A História não
+                contada</button>
             <button onclick="loadContent('folclore')" class="btn btn-padrao">Folclore e Mitologia em Dark Souls</button>
-            <button onclick="loadContent('filosofia-em-dark-souls')" class="btn btn-padrao">Filosofia em Dark Souls</button>
+            <button onclick="loadContent('filosofia-em-dark-souls')" class="btn btn-padrao">Filosofia em Dark
+                Souls</button>
         </nav>
 
         <main id="content-area">
@@ -84,7 +86,8 @@
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
-        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+        <img src="assets/images/divisor-madeira.png" loading="lazy" alt="Imagem de divisor de madeira" width="100%"
+            loading="lazy">
     </div>
 
     <!-- PARALLAX IMAGEM 1 -->
@@ -92,7 +95,8 @@
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
-        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+        <img src="assets/images/divisor-madeira.png" loading="lazy" alt="Imagem de divisor de madeira" width="100%"
+            loading="lazy">
     </div>
 
     <!-- CONTEUDO PARALLAX BONFIRE -->
@@ -101,93 +105,103 @@
             <h3 class="titulo-destaque">A Filosofia da Transitoriedade em Dark Souls</h3>
             <h4>Quando a Resistência ao Fim Gera o Sofrimento</h4>
 
-                <p>Dark Souls constrói sua narrativa sobre uma verdade implacável: tentar prolongar  o
-                    que deveria findar é a raiz de toda decadência. O jogo expõe, através de seus personagens e mundo,
-                    como a negação do ciclo natural — crescimento, amadurecimento, declínio e morte — corrompe não
-                    apenas indivíduos, mas a própria estrutura da realidade. A insistência em congelar o tempo ou
-                    estender uma era condenada transforma-se em maldição, e os que se agarram ao poder tornam-se
-                    caricaturas grotescas de seu antigo esplendor.</p>             
+            <p>Dark Souls constrói sua narrativa sobre uma verdade implacável: tentar prolongar o
+                que deveria findar é a raiz de toda decadência. O jogo expõe, através de seus personagens e mundo,
+                como a negação do ciclo natural — crescimento, amadurecimento, declínio e morte — corrompe não
+                apenas indivíduos, mas a própria estrutura da realidade. A insistência em congelar o tempo ou
+                estender uma era condenada transforma-se em maldição, e os que se agarram ao poder tornam-se
+                caricaturas grotescas de seu antigo esplendor.</p>
 
-                <section class="container-fluid">
-                    <div class="flex-row">
-                        <div class="flex-item bg-dark">
-                            <div class="character">
-                                <h3 class="character-name">Gwyn, o Senhor da Luz</h3>
-                                <p>O outrora magnânimo soberano, temendo a ascensão humana, marcou sua raça com o
-                                    Darksign e sacrificou-se para alimentar a Chama. Seu ato desesperado não apenas
-                                    prolongou uma era caduca, mas amaldiçoou a humanidade com uma "imortalidade vazia":
-                                    os Hollows, condenados a definhar em corpos que não morrem, mas perdem, a cada
-                                    morte, fragmentos de sua humanidade. Ironia cruel: o próprio Gwyn, encontrado como
-                                    um Hollow senil guardando uma chama moribunda, tornou-se o símbolo do fracasso de
-                                    sua própria ambição.</p>
+            <section class="container-fluid">
+                <div class="flex-row">
+                    <div class="flex-item bg-dark">
+                        <div class="character">
+                            <h3 class="character-name">Gwyn, o Senhor da Luz</h3>
+                            <p>O outrora magnânimo soberano, temendo a ascensão humana, marcou sua raça com o
+                                Darksign e sacrificou-se para alimentar a Chama. Seu ato desesperado não apenas
+                                prolongou uma era caduca, mas amaldiçoou a humanidade com uma "imortalidade vazia":
+                                os Hollows, condenados a definhar em corpos que não morrem, mas perdem, a cada
+                                morte, fragmentos de sua humanidade. Ironia cruel: o próprio Gwyn, encontrado como
+                                um Hollow senil guardando uma chama moribunda, tornou-se o símbolo do fracasso de
+                                sua própria ambição.</p>
 
-                                    <img src="./assets/images/filosofia-da-transitoriedade/gwyn.png" width="700" height="400" alt="Lord Gwyn na forma Hollow">
-                            </div>
+                            <img src="./assets/images/filosofia-da-transitoriedade/gwyn.png" width="700" height="400"
+                                loading="lazy" alt="Lord Gwyn na forma Hollow">
                         </div>
-                        <div class="flex-item bg-dark">
-                            <div class="character">
-                                <h3 class="character-name">A Bruxa de Izalith e o Preço da Ganância</h3>
-                                <p>Ao tentar replicar a Chama Primordial, sua piromancia descontrolada deu origem ao
-                                    Chaos Flame —
-                                    uma energia que deformou Izalith e seus habitantes em demônios. A Bruxa, reduzida a
-                                    uma larva
-                                    impotente, e suas filhas (como Queelag e a Fair Lady), condenadas a sofrer
-                                    eternamente por seus
-                                    corpos mutilados, </p>
-
-                                    <img src="./assets/images/filosofia-da-transitoriedade/queeleg.png" width="700" height="400" alt="Queelag, filha da Bruxa de Izalith">
-                            </div>
-                        </div>
-                        <div class="flex-item bg-dark">
-                            <div class="character">
-                                <h3 class="character-name">Seath, o Sem-Escamas: A Inveja que Consome</h3>
-                                <p>Traidor de sua espécie por invejar a imortalidade dos dragões, Seath alcançou sua
-                                    obsessão
-                                    através do Cristal Imortal — apenas para descobrir que a eternidade sem significado
-                                    é uma
-                                    prisão. Sua sanidade dissipou-se junto com sua visão, deixando apenas um monstro que
-                                    torturava
-                                    inocentes em experimentos insanos.</p>
-
-                                    <img src="./assets/images/filosofia-da-transitoriedade/seath.png" width="700" height="400" alt="Seath, dragão que perdeu tudo ao enlouquecer com o cristal">
-                            </div>
-                        </div>
-                        <div class="flex-item bg-dark">
-                            <div class="character">
-                                <h3 class="character-name">Pinwheel: O Amor que se Torna Tormento</h3>
-                                <p>Em sua tentativa de reviver família morta, o necromante fundiu-se aos cadáveres de
-                                    esposa e filho
-                                    em um único corpo disforme. Seu "sucesso" foi a perversão definitiva do afeto: união
-                                    física sem
-                                    alma, vida sem vitalidade.</p>
-
-                                    <img src="./assets/images/filosofia-da-transitoriedade/pinwheel.png" width="700" height="400" alt="Pinwheel, fundiu-se com a esposa e filho em ritual necromante enquanto tentava revive-los">
-                            </div>
-                        </div>
-
                     </div>
-                </section>
+                    <div class="flex-item bg-dark">
+                        <div class="character">
+                            <h3 class="character-name">A Bruxa de Izalith e o Preço da Ganância</h3>
+                            <p>Ao tentar replicar a Chama Primordial, sua piromancia descontrolada deu origem ao
+                                Chaos Flame —
+                                uma energia que deformou Izalith e seus habitantes em demônios. A Bruxa, reduzida a
+                                uma larva
+                                impotente, e suas filhas (como Queelag e a Fair Lady), condenadas a sofrer
+                                eternamente por seus
+                                corpos mutilados, </p>
 
-                <h3 class="titulo-destaque">O Legado de Lordran: Um Mundo em Agonia</h3>
-                <p>A distorção temporal de Lordran — onde heróis de eras passadas coexistem em um presente estilhaçado —
-                    é a metáfora máxima dessa resistência ao natural. O jogo não poupa o jogador: até os NPCs que buscam
-                    fugir de seu destino (como Solaire, devorado por sua própria obsessão) sucumbem.</p>
+                            <img src="./assets/images/filosofia-da-transitoriedade/queeleg.png" width="700" height="400"
+                                loading="lazy" alt="Queelag, filha da Bruxa de Izalith">
+                        </div>
+                    </div>
+                    <div class="flex-item bg-dark">
+                        <div class="character">
+                            <h3 class="character-name">Seath, o Sem-Escamas: A Inveja que Consome</h3>
+                            <p>Traidor de sua espécie por invejar a imortalidade dos dragões, Seath alcançou sua
+                                obsessão
+                                através do Cristal Imortal — apenas para descobrir que a eternidade sem significado
+                                é uma
+                                prisão. Sua sanidade dissipou-se junto com sua visão, deixando apenas um monstro que
+                                torturava
+                                inocentes em experimentos insanos.</p>
 
-                <p>Dark Souls ensina que a beleza da existência está em sua fugacidade. Tentar preservá-la à força é
+                            <img src="./assets/images/filosofia-da-transitoriedade/seath.png" width="700" height="400"
+                                loading="lazy" alt="Seath, dragão que perdeu tudo ao enlouquecer com o cristal">
+                        </div>
+                    </div>
+                    <div class="flex-item bg-dark">
+                        <div class="character">
+                            <h3 class="character-name">Pinwheel: O Amor que se Torna Tormento</h3>
+                            <p>Em sua tentativa de reviver família morta, o necromante fundiu-se aos cadáveres de
+                                esposa e filho
+                                em um único corpo disforme. Seu "sucesso" foi a perversão definitiva do afeto: união
+                                física sem
+                                alma, vida sem vitalidade.</p>
+
+                            <img src="./assets/images/filosofia-da-transitoriedade/pinwheel.png" width="700"
+                                height="400" loading="lazy"
+                                alt="Pinwheel, fundiu-se com a esposa e filho em ritual necromante enquanto tentava revive-los">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <h3 class="titulo-destaque">O Legado de Lordran: Um Mundo em Agonia</h3>
+            <p>A distorção temporal de Lordran — onde heróis de eras passadas coexistem em um presente estilhaçado —
+                é a metáfora máxima dessa resistência ao natural. O jogo não poupa o jogador: até os NPCs que buscam
+                fugir de seu destino (como Solaire, devorado por sua própria obsessão) sucumbem.</p>
+
+            <p>Dark Souls ensina que a beleza da existência está em sua fugacidade. Tentar preservá-la à força é
                 condenar-se a uma existência pálida, onde mesmo a vitória tem gosto de cinzas. A aceitação do
                 fim, seja pessoal ou cósmico, não é derrota, mas a única forma de evitar tornar-se Hollow — não
                 de corpo, mas de espírito.</p>
 
-                <h3 class="titulo-destaque">Moralidade Ambígua e Personagens Complexos</h3>
-                <p>Não há vilões absolutos. Gwyn, por exemplo, é movido por medo, não por maldade. Suas ações são questionáveis, mas compreensíveis. Dark Souls rejeita dicotomias simplistas e abraça a complexidade moral. A história é escrita por sobreviventes, distorcida por interesses, e muitas vezes oculta por conveniência. O jogador é desafiado a julgar por si mesmo — e a aceitar que talvez não haja julgamento definitivo.</p>
+            <h3 class="titulo-destaque">Moralidade Ambígua e Personagens Complexos</h3>
+            <p>Não há vilões absolutos. Gwyn, por exemplo, é movido por medo, não por maldade. Suas ações são
+                questionáveis, mas compreensíveis. Dark Souls rejeita dicotomias simplistas e abraça a complexidade
+                moral. A história é escrita por sobreviventes, distorcida por interesses, e muitas vezes oculta por
+                conveniência. O jogador é desafiado a julgar por si mesmo — e a aceitar que talvez não haja julgamento
+                definitivo.</p>
 
-           
+
         </article>
     </div>
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
-        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+        <img src="assets/images/divisor-madeira.png" loading="lazy" alt="Imagem de divisor de madeira" width="100%"
+            loading="lazy">
     </div>
 
     <!-- PARALLAX IMAGEM ANOR LONDO -->
@@ -195,23 +209,81 @@
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
-        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+        <img src="assets/images/divisor-madeira.png" loading="lazy" alt="Imagem de divisor de madeira" width="100%"
+            loading="lazy">
     </div>
 
-    <!-- CONTEUDO PARALLAX 2 -->
-    <div class="content">
-        <h2>Segunda Seção</h2>
-        <p>Mais conteúdo aqui...</p>
+    <!-- CONTEUDO PARALLAX GALERIA DE IMAGENS -->
+    <div id="galeria" class="content">
+        <section class="galeria">
+            <h3 class="titulo-destaque">Galeria de Imagens</h3>
+            <div class="grid-galeria">
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-pintura-ds.jpg" loading="lazy"
+                        alt="Vista de Lordran ao entardecer">
+                    <figcaption>Mundo Pintado de Ariandel</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-anor-londo.jpg" loading="lazy"
+                        alt="Catedral de Anor Londo iluminada pelo sol">
+                    <figcaption>Anor Londo — a cidade dos deuses</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-artorias.jpg" loading="lazy"
+                        alt="Artorias Caminhando na escuridão">
+                    <figcaption>Artorias the Abysswalker</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-artorias-2.jpg" loading="lazy"
+                        alt="Artorias segurando um fragmento de alma">
+                    <figcaption>Artorias the Abysswalker</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-cavaleiro-ds-2.jpg" loading="lazy"
+                        alt="Cavaleiro de Dark Souls 2 próximo a um fragmento de alma">
+                    <figcaption>Cavaleiro de Dark Souls 2 próximo a um fragmento de alma</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-ds-caveleiro.jpg" loading="lazy"
+                        alt="Cavaleiro de Dark Souls descando na bonfire">
+                    <figcaption>Cavaleiro descansando na Bonfire</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-ds-resmastered.jpg" loading="lazy"
+                        alt="Cavaleiro acendendo Bonfire">
+                    <figcaption>Bonfire Lit</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-end-of-world.jpg" loading="lazy"
+                        alt="O mundo está à beira do fim, com a Chama da Primeira Fonte se apagando, levando à Era das Trevas">
+                    <figcaption>Começo da Era das Trevas</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-solaire.jpg"
+                        alt="Solaire admirando o sol">
+                    <figcaption>Solaire de Astora</figcaption>
+                </figure>
+                <figure>
+                    <img class="galeria-img" src="./assets/images/wallpaper/wallpaper-solaire-and-knight.jpg"
+                        loading="lazy" alt="Jogador e Npc Solaire em foco">
+                    <figcaption>Selfie</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <span class="fechar">&times;</span>
+            <span class="seta seta-esquerda">&#10094;</span>
+            <span class="seta seta-direita">&#10095;</span>
+            <img class="modal-conteudo" id="img-modal">
+        </div>
+
     </div>
 
 
 
-
-
-
-
-
-    <button id="back-to-top" title="Voltar ao topo"><img src="assets/images/osso-do-regresso.png"
+    <button id="back-to-top" title="Voltar ao topo"><img src="assets/images/osso-do-regresso.png" loading="lazy"
             alt="Imagem do item Osso do Regresso, esse item serve para deslocar o jogador até última fogueira em que ele descansou."></button>
 
     <script src="./js/script.js"></script>

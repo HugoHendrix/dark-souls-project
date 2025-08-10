@@ -42,3 +42,47 @@ backToTopButton.onclick = function () {
         behavior: "smooth" // Suaviza o movimento
     });
 };
+
+
+
+// GALERIA
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("img-modal");
+const fechar = document.querySelector(".fechar");
+const imagens = document.querySelectorAll(".galeria-img");
+const setaEsquerda = document.querySelector(".seta-esquerda");
+const setaDireita = document.querySelector(".seta-direita");
+
+let indiceAtual = 0;
+
+function abrirModal(indice) {
+  modal.style.display = "block";
+  modalImg.src = imagens[indice].src;
+  modalImg.alt = imagens[indice].alt;
+  indiceAtual = indice;
+}
+
+imagens.forEach((img, i) => {
+  img.addEventListener("click", () => abrirModal(i));
+});
+
+fechar.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+setaDireita.addEventListener("click", () => {
+  indiceAtual = (indiceAtual + 1) % imagens.length;
+  abrirModal(indiceAtual);
+});
+
+setaEsquerda.addEventListener("click", () => {
+  indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+  abrirModal(indiceAtual);
+});
+
