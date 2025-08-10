@@ -35,7 +35,7 @@
 <body>
 
     <!-- HEADER -->
-    <header class="header-bg">
+    <header class="bg-header">
         <a href="/" aria-label="Ir para a Página inicial">
             <img src="assets/logo/logo-ds.webp" alt="Logo Dark Souls" width="300" height="200">
         </a>
@@ -55,8 +55,9 @@
         </nav>
     </header>
 
+    <!-- DIVISOR MADEIRA -->
     <div class="divisor">
-        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%">
+        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
     </div>
 
     <!-- SEÇÃO DE BOAS VINDAS -->
@@ -68,18 +69,140 @@
 
         <nav id="nav-anchor" class="nav-buttons">
             <button onclick="loadContent('informacoes-do-jogo')" class="btn btn-padrao">Características do Jogo</button>
-            <button onclick="loadContent('lore')" class="btn btn-padrao">Lore</button>
+            <button onclick="loadContent('lore')" class="btn btn-padrao">Um pouco da Lore - A História não contada</button>
             <button onclick="loadContent('folclore')" class="btn btn-padrao">Folclore e Mitologia em Dark Souls</button>
+            <button onclick="loadContent('filosofia-em-dark-souls')" class="btn btn-padrao">Filosofia em Dark Souls</button>
         </nav>
 
         <main id="content-area">
         </main>
 
-        <button id="back-to-top" title="Voltar ao topo"><img src="assets/images/back-to-top.png" alt=""></button>
+
 
 
     </section>
 
+    <!-- DIVISOR MADEIRA -->
+    <div class="divisor">
+        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+    </div>
+
+    <!-- PARALLAX IMAGEM 1 -->
+    <div class="parallax imagem-parallax-bonfire"></div>
+
+    <!-- DIVISOR MADEIRA -->
+    <div class="divisor">
+        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+    </div>
+
+    <!-- CONTEUDO PARALLAX BONFIRE -->
+    <div class="content">
+        <article>
+            <h3 class="titulo-destaque">A Filosofia da Transitoriedade em Dark Souls</h3>
+            <h4>Quando a Resistência ao Fim Gera o Sofrimento</h4>
+
+                <p>Dark Souls constrói sua narrativa sobre uma verdade implacável: tentar prolongar  o
+                    que deveria findar é a raiz de toda decadência. O jogo expõe, através de seus personagens e mundo,
+                    como a negação do ciclo natural — crescimento, amadurecimento, declínio e morte — corrompe não
+                    apenas indivíduos, mas a própria estrutura da realidade. A insistência em congelar o tempo ou
+                    estender uma era condenada transforma-se em maldição, e os que se agarram ao poder tornam-se
+                    caricaturas grotescas de seu antigo esplendor.</p>             
+
+                <section class="container-fluid">
+                    <div class="flex-row">
+                        <div class="flex-item bg-dark">
+                            <div class="character">
+                                <h3 class="character-name">Gwyn, o Senhor da Luz</h3>
+                                <p>O outrora magnânimo soberano, temendo a ascensão humana, marcou sua raça com o
+                                    Darksign e sacrificou-se para alimentar a Chama. Seu ato desesperado não apenas
+                                    prolongou uma era caduca, mas amaldiçoou a humanidade com uma "imortalidade vazia":
+                                    os Hollows, condenados a definhar em corpos que não morrem, mas perdem, a cada
+                                    morte, fragmentos de sua humanidade. Ironia cruel: o próprio Gwyn, encontrado como
+                                    um Hollow senil guardando uma chama moribunda, tornou-se o símbolo do fracasso de
+                                    sua própria ambição.</p>
+
+                                    <img src="./assets/images/filosofia-da-transitoriedade/gwyn.png" width="700" height="400" alt="Lord Gwyn na forma Hollow">
+                            </div>
+                        </div>
+                        <div class="flex-item bg-dark">
+                            <div class="character">
+                                <h3 class="character-name">A Bruxa de Izalith e o Preço da Ganância</h3>
+                                <p>Ao tentar replicar a Chama Primordial, sua piromancia descontrolada deu origem ao
+                                    Chaos Flame —
+                                    uma energia que deformou Izalith e seus habitantes em demônios. A Bruxa, reduzida a
+                                    uma larva
+                                    impotente, e suas filhas (como Queelag e a Fair Lady), condenadas a sofrer
+                                    eternamente por seus
+                                    corpos mutilados, </p>
+
+                                    <img src="./assets/images/filosofia-da-transitoriedade/queeleg.png" width="700" height="400" alt="Queelag, filha da Bruxa de Izalith">
+                            </div>
+                        </div>
+                        <div class="flex-item bg-dark">
+                            <div class="character">
+                                <h3 class="character-name">Seath, o Sem-Escamas: A Inveja que Consome</h3>
+                                <p>Traidor de sua espécie por invejar a imortalidade dos dragões, Seath alcançou sua
+                                    obsessão
+                                    através do Cristal Imortal — apenas para descobrir que a eternidade sem significado
+                                    é uma
+                                    prisão. Sua sanidade dissipou-se junto com sua visão, deixando apenas um monstro que
+                                    torturava
+                                    inocentes em experimentos insanos.</p>
+
+                                    <img src="./assets/images/filosofia-da-transitoriedade/seath.png" width="700" height="400" alt="Seath, dragão que perdeu tudo ao enlouquecer com o cristal">
+                            </div>
+                        </div>
+                        <div class="flex-item bg-dark">
+                            <div class="character">
+                                <h3 class="character-name">Pinwheel: O Amor que se Torna Tormento</h3>
+                                <p>Em sua tentativa de reviver família morta, o necromante fundiu-se aos cadáveres de
+                                    esposa e filho
+                                    em um único corpo disforme. Seu "sucesso" foi a perversão definitiva do afeto: união
+                                    física sem
+                                    alma, vida sem vitalidade.</p>
+
+                                    <img src="./assets/images/filosofia-da-transitoriedade/pinwheel.png" width="700" height="400" alt="Pinwheel, fundiu-se com a esposa e filho em ritual necromante enquanto tentava revive-los">
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <h3 class="titulo-destaque">O Legado de Lordran: Um Mundo em Agonia</h3>
+                <p>A distorção temporal de Lordran — onde heróis de eras passadas coexistem em um presente estilhaçado —
+                    é a metáfora máxima dessa resistência ao natural. O jogo não poupa o jogador: até os NPCs que buscam
+                    fugir de seu destino (como Solaire, devorado por sua própria obsessão) sucumbem.</p>
+
+                <p>Dark Souls ensina que a beleza da existência está em sua fugacidade. Tentar preservá-la à força é
+                condenar-se a uma existência pálida, onde mesmo a vitória tem gosto de cinzas. A aceitação do
+                fim, seja pessoal ou cósmico, não é derrota, mas a única forma de evitar tornar-se Hollow — não
+                de corpo, mas de espírito.</p>
+
+                <h3 class="titulo-destaque">Moralidade Ambígua e Personagens Complexos</h3>
+                <p>Não há vilões absolutos. Gwyn, por exemplo, é movido por medo, não por maldade. Suas ações são questionáveis, mas compreensíveis. Dark Souls rejeita dicotomias simplistas e abraça a complexidade moral. A história é escrita por sobreviventes, distorcida por interesses, e muitas vezes oculta por conveniência. O jogador é desafiado a julgar por si mesmo — e a aceitar que talvez não haja julgamento definitivo.</p>
+
+           
+        </article>
+    </div>
+
+    <!-- DIVISOR MADEIRA -->
+    <div class="divisor">
+        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+    </div>
+
+    <!-- PARALLAX IMAGEM ANOR LONDO -->
+    <div class="parallax imagem-parallax-anor-londo"></div>
+
+    <!-- DIVISOR MADEIRA -->
+    <div class="divisor">
+        <img src="assets/images/divisor-madeira.png" alt="Imagem de divisor de madeira" width="100%" loading="lazy">
+    </div>
+
+    <!-- CONTEUDO PARALLAX 2 -->
+    <div class="content">
+        <h2>Segunda Seção</h2>
+        <p>Mais conteúdo aqui...</p>
+    </div>
 
 
 
@@ -88,12 +211,8 @@
 
 
 
-
-
-
-
-
-
+    <button id="back-to-top" title="Voltar ao topo"><img src="assets/images/osso-do-regresso.png"
+            alt="Imagem do item Osso do Regresso, esse item serve para deslocar o jogador até última fogueira em que ele descansou."></button>
 
     <script src="./js/script.js"></script>
 </body>

@@ -1,13 +1,19 @@
-
 :root {
   /* 🎨 Paleta de Cores */
-  --color-bg-primary: #1C1F26;       /* Raisin Black */
-  --color-bg-secondary: #2A2E38;     /* Gun Metal */
-  --color-text-primary: #C4C4C4;     /* Silver Sand */
-  --color-text-muted: #999999;       /* Battleship Gray */
-  --color-accent-gold: #B28B45;      /* Dark Goldenrod */
-  --color-link: #7A1E1E;             /* Falu Red */
-  --color-lore: #4A2C68;             /* Tekhelet */
+  --color-bg-primary: #1C1F26;
+  /* Raisin Black */
+  --color-bg-secondary: #2A2E38;
+  /* Gun Metal */
+  --color-text-primary: #C4C4C4;
+  /* Silver Sand */
+  --color-text-muted: #999999;
+  /* Battleship Gray */
+  --color-accent-gold: #B28B45;
+  /* Dark Goldenrod */
+  --color-link: #7A1E1E;
+  /* Falu Red */
+  --color-lore: #4A2C68;
+  /* Tekhelet */
 
   /* 🖋️ Tipografia */
   --font-base: 'EB Garamond', serif;
@@ -24,58 +30,66 @@ body {
 
 .container-fluid {
   width: 100%;
-  padding: 4rem 2rem;   
+  padding: 4rem 2rem;
 }
 
 .flex-row {
   display: flex;
-  flex-wrap: wrap;               /* Permite quebra de linha em telas menores */
-  gap: 2rem;                     /* Espaçamento entre os itens */
+  flex-wrap: wrap;
+  /* Permite quebra de linha em telas menores */
+  gap: 2rem;
+  /* Espaçamento entre os itens */
   justify-content: space-between;
 }
 
 .flex-item {
-  flex: 1 1 45%;                 /* Cresce, encolhe, base de 45% */
+  flex: 1 1 45%;
+  /* Cresce, encolhe, base de 45% */
   background-color: var(--color-bg-secondary);
   padding: 2rem;
   border-radius: 8px;
 }
 
-h1, h2, h3, h4, h5, h6 { 
-    margin-bottom: 25px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 25px;
 }
 
-p { 
-    margin-bottom: 30px;
-    text-indent: 15px;    
+p {
+  margin-block: 25px;
+  text-indent: 15px;
 }
 
-h1 { 
-    text-align: center;
-    font-size: 4rem;
+h1 {
+  text-align: center;
+  font-size: 4rem;
 }
 
 p.mensagem-bem-vindo {
-    font-size: 1.6rem;
-    width: 88%;
-    margin: 0 auto 30px auto;
+  font-size: 1.6rem;
+  width: 75ch;
+  margin: 0 auto 30px auto;
 }
 
-h3.titulo-destaque::after { 
-    content: "";
-    border: 1px solid var(--color-accent-gold);
-    display: block;
-    width: 80%;
+h3.titulo-destaque::after {
+  content: "";
+  border: 1px solid var(--color-accent-gold);
+  display: block;
+  width: 80%;
 }
 
 ul li {
-    margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 .nav-buttons {
   display: flex;
-  justify-content: first baseline;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
 
 }
 
@@ -107,26 +121,103 @@ ul li {
 }
 
 #back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    
-    cursor: pointer;
-    display: none; /* Oculto inicialmente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+
+  cursor: pointer;
+  display: none;
+  /* Oculto inicialmente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
 }
 
 #back-to-top:hover {
-    background-color: #585d64;
+  background-color: #585d64;
 }
 
-hr {
-  margin-block: 15px;
+.parallax {
+  height: 65vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.imagem-parallax-bonfire {
+  background-image: url('../assets/images/parallax/parallax-jogador-acendendo-a-bonfire.jpg');
+}
+
+.imagem-parallax-anor-londo {
+  background-image: url('../assets/images/parallax/parallax-jogador-chegando-em-anor-londo.jpg');
+}
+
+.bg-header {
+  background: url('../assets/images/background/bg-header.png');
+}
+
+.bg-blue {
+  background: url('../assets/images//background/bg-blue.jpg');
+}
+
+.bg-dark {
+  background: url('../assets/images//background/bg-dark.jpg');
+}
+
+.bg-blue-brown {
+  background: url('../assets/images/background/bg-blue-brown.jpg');
+}
+
+.bg-gray { 
+  background: rgba(42, 46, 56, 2) url('../assets/images/background/bg-gray.jpg');
+}
+
+.content {
+  padding: 50px;
+  background: var(var(--color-bg-primary));
+  text-align: justify;
+  word-wrap: break-word;
+  width: 90%;
+
+}
+
+h3.character-name {
+  font-family: var(--font-base);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+.img-filosofos {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 70%;
+  height: 50%;
+  border-radius: 6px;
+  filter: grayscale(100%) contrast(120%) brightness(80%);
+}
+
+.img-folclore {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
 }
