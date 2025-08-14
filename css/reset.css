@@ -57,7 +57,7 @@ html, body {
 }
 
 body {
-  line-height: var(--lh-normal);
+  line-height: var(--lh-relaxed);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: var(--fs-md);

@@ -41,7 +41,8 @@
         </a>
 
         <div class="solaire-container" data-praise="🌞 Praise the Sun! 🌞">
-            <img src="assets/images/logo/solaire-of-astora.png"                 alt="Solaire de Astora realizando uma saudação ao sol" width="236" height="225">
+            <img src="assets/images/logo/solaire-of-astora.png" alt="Solaire de Astora realizando uma saudação ao sol"
+                width="236" height="225">
         </div>
 
         <nav class="navbar">
@@ -49,7 +50,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="conteudo/lore.html">Lore</a></li>
                 <li><a href="#galeria">Galeria</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -280,6 +281,45 @@
         </div>
 
     </div>
+
+    <!-- DIVISOR MADEIRA -->
+    <div class="divisor">
+        <img src="assets/images/divisor-madeira.png" loading="lazy" alt="Imagem de divisor de madeira" width="100%"
+            loading="lazy">
+    </div>
+
+    <section class="container-fluid bg-map">
+        <div class="flex-row">
+            <div class="flex-item bg-blue-brown">
+                <h3 id="contato" class="titulo-destaque">Contato</h3>
+                <p>Toda jornada é feita de encontros. Se deseja falar conosco — seja para discutir a maldição, os Lordes ou os segredos do Abismo — envie sua mensagem. Que ela atravesse os véus do tempo e chegue até nós.</p>
+                <div class="form-container">
+                    <form id="form-contato" action="https://formspree.io/f/xzzvykrp" method="POST">
+                        <fieldset>
+                            <legend id="contato-titulo">Formulário de Contato</legend>
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required autocomplete="name">
+
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required autocomplete="email">
+
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+                            <!-- Honeypot -->
+                            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                                <label for="website">Se você for humano, deixe este campo vazio</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                            </div>
+
+                            <button type="submit" class="btn btn-padrao">Enviar</button>
+                        </fieldset>
+                    </form>
+                    <img class="contorno-personagem" src="./assets/images/form-feature.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

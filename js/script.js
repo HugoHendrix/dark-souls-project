@@ -86,3 +86,15 @@ setaEsquerda.addEventListener("click", () => {
   abrirModal(indiceAtual);
 });
 
+
+// TESTE DE FORMULÁRIO
+
+// fetch("https://formspree.io/f/xzzvykrp", {
+//   method:"POST",
+//   headers: {"content-Type": "application;json"},
+//   body: JSON.stringify({
+//     nome:"Hugo",
+//     email:"hugohendrixc@gmail.com",
+//     mensagem: "OLÁ"
+//   })
+// });
