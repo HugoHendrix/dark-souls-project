@@ -129,10 +129,6 @@ Exemplo de honeypot:
 <input type="text" name="_gotcha" style="display:none" />
 ```
 
-Ótima pergunta, Hugo! O termo **honeypot** (literalmente “pote de mel”) é uma técnica simples e eficaz usada para **bloquear bots de spam** em formulários — sem incomodar o usuário com CAPTCHAs ou desafios visuais.
-
----
-
 ## 🍯 O que é Honeypot em formulários?
 
 É um **campo invisível** que os usuários reais não veem nem preenchem, mas que **bots automatizados** geralmente detectam e tentam preencher. Se esse campo estiver preenchido, o sistema assume que o envio foi feito por um bot — e pode ignorar ou bloquear a mensagem.

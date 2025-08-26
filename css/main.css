@@ -26,7 +26,6 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: var(--font-base);
-  text-wrap: pretty;
 
 }
 
@@ -66,6 +65,8 @@ h6 {
 p {
   margin-block: 25px;
   text-indent: 15px;
+  text-wrap: pretty;
+  text-align: justify;
 }
 
 h1 {

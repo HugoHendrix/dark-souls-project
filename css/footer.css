@@ -1,0 +1,30 @@
+footer {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-footer ul {
+    list-style-type: none;
+}
+
+.container-footer a {
+    text-decoration: none;
+    color: var(--color-accent-gold);
+    transition: opacity 0.3s ease;
+}
+
+.container-footer ul li a:hover {
+    color: gray;
+    
+}
+
+.container-social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-social-icons .social-icons:hover {
+    color: var(--color-accent-gold);
+}
