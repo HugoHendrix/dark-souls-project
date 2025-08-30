@@ -1,22 +1,31 @@
 :root {
   /* 🎨 Paleta de Cores */
   --color-bg-primary: #1C1F26;
-  --color-bg-secondary: #2A2E38;  
-  --color-text-primary: #C4C4C4;  
-  --color-text-muted: #999999;  
-  --color-accent-gold: #B28B45;  
-  --color-link: #7A1E1E;  
+  --color-bg-secondary: #2A2E38;
+  --color-text-primary: #C4C4C4;
+  --color-text-muted: #999999;
+  --color-accent-gold: #B28B45;
+  --color-link: #7A1E1E;
   --color-lore: #4A2C68;
-  
+
   /* 🖋️ Tipografia */
   --font-base: 'EB Garamond', serif;
   --font-title: 'MedievalSharp', cursive;
   --font-heading: 'Pirata One', cursive;
   --font-lore: 'UnifrakturCook', cursive;
-  
-  --min-font: 1rem;    /* Tamanho mínimo */
-  --max-font: 1.5rem;  /* Tamanho máximo */
-   font-size: clamp(var(--min-font), 2vw + 1rem, var(--max-font));
+
+  --min-font: 1rem;
+  /* Tamanho mínimo */
+  --max-font: 1.5rem;
+  /* Tamanho máximo */
+  font-size: clamp(var(--min-font), 2vw + 1rem, var(--max-font));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body {
@@ -26,5 +35,3 @@ body {
   font-size: clamp(var(--min-font), var(--ideal-font), var(--max-font));
 
 }
-
-
