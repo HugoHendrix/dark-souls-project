@@ -1,17 +1,16 @@
-:root {
-  /* 🎨 Paleta de Cores */
-  --color-bg-primary: #1C1F26;
-  --color-bg-secondary: #2A2E38;
-  --color-text-primary: #C4C4C4;
-  --color-text-muted: #999999;
-  --color-accent-gold: #B28B45;
-  --color-link: #7A1E1E;
-  --color-lore: #4A2C68;
+:root {  
+  /* Cores Tema Dark */
+  --bg-primario: #121212;
+  --bg-secundario: #1E1E1E;
+  --texto-primario: #cfc6c6;
+  --texto-secundario: #A0A0A0;
+  --destaque: #C84C0C;
+  --sombra: rgba(0, 0, 0, 0.5);
 
   /* 🖋️ Tipografia */
   --font-base: 'EB Garamond', serif;
-  --font-title: 'MedievalSharp', cursive;
-  --font-heading: 'Pirata One', cursive;
+  --font-titulo: 'MedievalSharp', cursive;
+  --font-titulo-secudario: 'Pirata One', cursive;
   --font-lore: 'UnifrakturCook', cursive;
 
   --min-font: 1rem;
@@ -19,7 +18,19 @@
   --max-font: 1.5rem;
   /* Tamanho máximo */
   font-size: clamp(var(--min-font), 2vw + 1rem, var(--max-font));
+
 }
+
+/* Cores Tema Light */
+[data-theme="light"] {
+  --bg-primario: #F5F5F5;
+  --bg-secundario: #fff;
+  --texto-primario: #212121;
+  --texto-secundario: #666;
+  --sombra: rgba(0, 0, 0, 0.1);
+
+}
+
 
 * {
   margin: 0;
@@ -29,9 +40,22 @@
 }
 
 body {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background-color: var(--bg-primario);
+  color: var(--texto-primario);
   font-family: var(--font-base);
   font-size: clamp(var(--min-font), var(--ideal-font), var(--max-font));
 
 }
+
+#btn-trocar-tema {
+  color: var(--texto-primario);
+  position: absolute;
+  top: 180px;
+  right: 30px;
+}
+
+.icone-lua { display: none; }
+.icone-sol { display: block; }
+
+[data-theme="light"] .icone-lua { display: block; }
+[data-theme="light"] .icone-sol { display: none; }

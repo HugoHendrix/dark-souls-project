@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <link rel="shortcut icon" href="../img/book.png" type="image/x-icon">
+    <title>CodeWiki</title>
+</head>
+
+<body>
+    <article>
+        <h2 id="-documenta-o-altern-ncia-de-tema-dark-light-">📄 Documentação: Alternância de Tema (Dark/Light)</h2>
+        <h3 id="-vis-o-geral">🧩 Visão Geral</h3>
+        <p>Este código implementa um botão de alternância de tema entre <strong>Dark Mode</strong> e <strong>Light
+                Mode</strong> em uma página web. A troca é feita dinamicamente com JavaScript e os estilos são definidos
+            via CSS utilizando variáveis customizadas (<code>CSS Variables</code>). O estado do tema é persistido no
+            <code>localStorage</code>.</p>
+        <hr>
+        <h3 id="-html-bot-o-de-troca-de-tema">🎛️ HTML: Botão de Troca de Tema</h3>
+        <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn-trocar-tema"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Trocar tema"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icone-sol"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icone-lua"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+        <ul>
+            <li><strong><code>id=&quot;btn-trocar-tema&quot;</code></strong>: Identificador único para aplicar lógica de
+                clique.</li>
+            <li><strong><code>title=&quot;Trocar tema&quot;</code></strong>: Dica visual ao passar o mouse.</li>
+            <li><strong><code>icone-sol</code> e <code>icone-lua</code></strong>: Ícones SVG que representam os temas.
+                Apenas um é exibido por vez, dependendo do tema ativo.</li>
+        </ul>
+        <hr>
+        <h3 id="-css-estiliza-o-e-temas">🎨 CSS: Estilização e Temas</h3>
+        <h4 id="-tema-dark-padr-o-">🌑 Tema Dark (padrão)</h4>
+        <p>Definido em <code>:root</code>, com variáveis como:</p>
+        <ul>
+            <li><code>--bg-primario</code>: Cor de fundo principal.</li>
+            <li><code>--texto-primario</code>: Cor do texto principal.</li>
+            <li><code>--font-base</code>: Fonte padrão.</li>
+            <li><code>font-size</code>: Usa <code>clamp()</code> para responsividade.</li>
+        </ul>
+        <h4 id="-tema-light">☀️ Tema Light</h4>
+        <p>Ativado com o atributo <code>data-theme=&quot;light&quot;</code> no <code>&lt;body&gt;</code>. Sobrescreve as
+            variáveis do tema escuro.</p>
+        <pre><code class="lang-css">[data-theme="light"] {
+  -<span class="ruby">-bg-<span class="hljs-symbol">primario:</span> <span class="hljs-comment">#F5F5F5;</span>
+</span>  -<span class="ruby">-texto-<span class="hljs-symbol">primario:</span> <span class="hljs-comment">#212121;</span>
+</span>  ...
+}
+</code></pre>
+        <h4 id="-altern-ncia-de-cones">🔁 Alternância de Ícones</h4>
+        <pre><code class="lang-css"><span class="hljs-selector-class">.icone-lua</span> { <span class="hljs-attribute">display</span>: none; }
+<span class="hljs-selector-class">.icone-sol</span> { <span class="hljs-attribute">display</span>: block; }
+
+<span class="hljs-selector-attr">[data-theme="light"]</span> <span class="hljs-selector-class">.icone-lua</span> { <span class="hljs-attribute">display</span>: block; }
+<span class="hljs-selector-attr">[data-theme="light"]</span> <span class="hljs-selector-class">.icone-sol</span> { <span class="hljs-attribute">display</span>: none; }
+</code></pre>
+        <hr>
+        <h3 id="-javascript-l-gica-de-altern-ncia">🧠 JavaScript: Lógica de Alternância</h3>
+        <pre><code class="lang-js"><span class="hljs-keyword">const</span> salvarTema = localStorage.getItem(<span class="hljs-string">'tema'</span>);
+<span class="hljs-keyword">if</span> (salvarTema === <span class="hljs-string">'light'</span>) {
+  <span class="hljs-built_in">document</span>.body.setAttribute(<span class="hljs-string">'data-theme'</span>, <span class="hljs-string">'light'</span>);
+}
+</code></pre>
+        <ul>
+            <li>Verifica se o usuário já escolheu o tema anteriormente.</li>
+            <li>Se sim, aplica o tema salvo ao carregar a página.</li>
+        </ul>
+        <h4 id="-evento-de-clique">📌 Evento de Clique</h4>
+        <pre><code class="lang-js">btnTrocarTema.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">document</span>.body.hasAttribute(<span class="hljs-string">'data-theme'</span>)) {
+    <span class="hljs-built_in">document</span>.body.removeAttribute(<span class="hljs-string">'data-theme'</span>);
+    localStorage.setItem(<span class="hljs-string">'tema'</span>, <span class="hljs-string">'dark'</span>);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">document</span>.body.setAttribute(<span class="hljs-string">'data-theme'</span>, <span class="hljs-string">'light'</span>);
+    localStorage.setItem(<span class="hljs-string">'tema'</span>, <span class="hljs-string">'light'</span>);
+  }
+});
+</code></pre>
+        <ul>
+            <li>Alterna entre os temas ao clicar no botão.</li>
+            <li>Atualiza o <code>localStorage</code> para manter a preferência do usuário.</li>
+        </ul>
+        <hr>
+        <h3 id="-sugest-es-de-melhoria">🧪 Sugestões de Melhoria</h3>
+        <ul>
+            <li>✅ Adicionar transições suaves entre temas com <code>transition</code>.</li>
+            <li>✅ Incluir suporte para detectar preferência do sistema com <code>window.matchMedia</code>.</li>
+            <li>✅ Melhorar acessibilidade com <code>aria-label</code> no botão.</li>
+        </ul>
+
+    </article>
+
+    <footer class="p-1">
+        <button class="accent">
+            <a href="../index.html" type="button" class="accent">Voltar</a>
+        </button>
+    </footer>
+
+</body>
+
+</html>

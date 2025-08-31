@@ -1,102 +1,25 @@
-function loadContent(pageName) {
-    const contentArea = document.getElementById('content-area');
-    const filePath = `conteudos/${pageName}.html`;
-    
-    fetch(filePath)
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao carregar o conteúdo: ${response.statusText}`);
-    }
-    return response.text();
-})
-.then(html => {
-    contentArea.innerHTML = html;
-    document.getElementById('nav-anchor').scrollIntoView({ behavior: 'smooth' });
+// Lógica para carregar o tema
+const salvarTema = localStorage.getItem('tema');
+if (salvarTema === 'light') {
+  document.body.setAttribute('data-theme', 'light');
 
-})
-.catch(error => {
-    console.error(error);
-    contentArea.innerHTML = '<p style="color: red; text-align: center; font-size: 20px;">Erro ao carregar o conteúdo.</p>';
-
-})
 }
 
-// BOTAO DE VOLTAR AO TOPO
+const btnTrocarTema = document.getElementById('btn-trocar-tema');
+btnTrocarTema.addEventListener('click', function () {
 
-// Obtenha o botão
-const backToTopButton = document.getElementById("back-to-top");
+  if (document.body.hasAttribute('data-theme')) {
 
-// Mostrar ou esconder o botão com base na rolagem
-window.onscroll = function () {
-    if (window.scrollY > 300) { // Mostra após 300px de rolagem
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
-    }
-};
+    // Se o <body> tem o atributo, remova-o
+    document.body.removeAttribute('data-theme');
+    localStorage.setItem('tema', 'dark');
+  } else {
 
-// Rolar para o topo quando o botão for clicado
-backToTopButton.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Suaviza o movimento
-    });
-};
-
-
-
-// GALERIA
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("img-modal");
-const fechar = document.querySelector(".fechar");
-const imagens = document.querySelectorAll(".galeria-img");
-const setaEsquerda = document.querySelector(".seta-esquerda");
-const setaDireita = document.querySelector(".seta-direita");
-
-let indiceAtual = 0;
-
-function abrirModal(indice) {
-  modal.style.display = "block";
-  modalImg.src = imagens[indice].src;
-  modalImg.alt = imagens[indice].alt;
-  indiceAtual = indice;
-}
-
-imagens.forEach((img, i) => {
-  img.addEventListener("click", () => abrirModal(i));
-});
-
-fechar.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", e => {
-  if (e.target === modal) {
-    modal.style.display = "none";
+    // Se o <body> não tem o atributo, adicione-o
+    document.body.setAttribute('data-theme', 'light');
+    localStorage.setItem('tema', 'light')
   }
+
+
 });
-
-setaDireita.addEventListener("click", () => {
-  indiceAtual = (indiceAtual + 1) % imagens.length;
-  abrirModal(indiceAtual);
-});
-
-setaEsquerda.addEventListener("click", () => {
-  indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
-  abrirModal(indiceAtual);
-});
-
-
-// TESTE DE FORMULÁRIO
-
-// fetch("https://formspree.io/f/xzzvykrp", {
-//   method:"POST",
-//   headers: {"content-Type": "application;json"},
-//   body: JSON.stringify({
-//     nome:"Hugo",
-//     email:"hugohendrixc@gmail.com",
-//     mensagem: "OLÁ"
-//   })
-// });
-
 
