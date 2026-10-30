@@ -161,35 +161,35 @@ ul li {
 
 
 .imagem-parallax-bonfire {
-  background-image: url('../assets/images/parallax/parallax-jogador-acendendo-a-bonfire.jpg');
+  background-image: url('../assets/images/parallax/parallax-jogador-acendendo-a-bonfire.webp');
 }
 
 .imagem-parallax-anor-londo {
-  background-image: url('../assets/images/parallax/parallax-jogador-chegando-em-anor-londo.jpg');
+  background-image: url('../assets/images/parallax/parallax-jogador-chegando-em-anor-londo.webp');
 }
 
 .bg-header {
-  background: url('../assets/images/background/bg-header.png');
+  background: url('../assets/images/background/bg-header.webp');
 }
 
 .bg-blue {
-  background: url('../assets/images//background/bg-blue.jpg');
+  background: url('../assets/images/background/bg-blue.webp');
 }
 
 .bg-dark {
-  background: url('../assets/images//background/bg-dark.jpg');
+  background: url('../assets/images/background/bg-dark.webp');
 }
 
 .bg-blue-brown {
-  background: url('../assets/images/background/bg-blue-brown.jpg');
+  background: url('../assets/images/background/bg-blue-brown.webp');
 }
 
 .bg-gray { 
-  background: url('../assets/images/background/bg-gray.jpg');
+  background: url('../assets/images/background/bg-gray.webp');
 }
 
 .bg-map { 
-  background: url('../assets/images/background/bg-map.jpg');
+  background: url('../assets/images/background/bg-map.webp');
 }
 
 .bg-white {
@@ -223,7 +223,7 @@ h3.character-name {
   margin: 0 auto;
   max-width: 100%;
   width: 70%;
-  height: 50%;
+  height: auto;
   border-radius: 6px;
   filter: grayscale(100%) contrast(120%) brightness(80%);
 }

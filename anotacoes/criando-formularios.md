@@ -67,7 +67,7 @@ Exemplo com Formspree:
 - Use `label` com `for` para acessibilidade.
 - Valide campos com `required`, `type="email"`, etc.
 - Dê feedback visual ao usuário (mensagem de sucesso ou erro).
-- Use `placeholder` com moderação — não substitui o `label`.
+- Use `placeholder` com moderação, pois não substitui o `label`.
 
 ---
 

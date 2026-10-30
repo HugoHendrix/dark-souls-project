@@ -25,7 +25,7 @@ elemento {
 - `center/cover` → posição central e tamanho para cobrir o elemento
 - `fixed` → a imagem fica fixa na tela (não rola com o conteúdo)
 
-Você pode usar apenas os valores que precisar — não é obrigatório incluir todos. Por exemplo:
+Você pode usar apenas os valores que precisar: não é obrigatório incluir todos. Por exemplo:
 
 ```css
 background: url('bg.png') center no-repeat;

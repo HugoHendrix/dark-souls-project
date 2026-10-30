@@ -6,10 +6,6 @@ header {
     
 }
 
-.header-bg {
-  background: url('../assets/images/header-bg.png');  
-}
-
 .solaire-container:hover::before { 
     content: attr(data-praise);
     position: absolute;    

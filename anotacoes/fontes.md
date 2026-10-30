@@ -2,7 +2,7 @@
 
 | Fonte              | Estilo(s) disponíveis             | Peso(s) disponíveis | Uso sugerido              |
 |--------------------|----------------------------------|---------------------|---------------------------|
-| **EB Garamond**    | Normal, Itálico                  | 400–800             | Texto corrido, parágrafos |
+| **EB Garamond**    | Normal, Itálico                  | 400 a 800             | Texto corrido, parágrafos |
 | **MedievalSharp**  | Normal                           | 400                 | Títulos decorativos       |
 | **Pirata One**     | Normal                           | 400                 | Cabeçalhos temáticos      |
 | **UnifrakturCook** | Normal (Fraktur gótica)          | 700                 | Destaques estilizados     |

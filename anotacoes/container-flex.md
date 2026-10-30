@@ -18,7 +18,7 @@ Este conjunto de classes CSS define um layout **responsivo em linha (row)** usan
 ```
 
 - **`width: 100%`**: ocupa toda a largura disponível da tela.
-- **`padding: 4rem 2rem`**: espaçamento interno generoso — 4rem vertical e 2rem horizontal — para respiro visual.
+- **`padding: 4rem 2rem`**: espaçamento interno generoso (4rem vertical e 2rem horizontal) para respiro visual.
 
 ---
 

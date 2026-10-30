@@ -63,7 +63,7 @@ Mesmo com arquivos leves, você pode aplicar `loading="lazy"` para adiar o carre
         src="assets/images/anor-londo.webp"
         alt="Catedral de Anor Londo iluminada pelo sol"
       />
-      <figcaption>Anor Londo — a cidade dos deuses</figcaption>
+      <figcaption>Anor Londo: a cidade dos deuses</figcaption>
     </figure>
     <!-- Mais imagens -->
   </div>
@@ -101,7 +101,7 @@ img {
 
 ### 🎯 Por que usar Grid?
 
-O **CSS Grid Layout** é uma das ferramentas mais poderosas e flexíveis para criar layouts responsivos e organizados. Ele permite dividir o espaço em linhas e colunas, posicionar elementos com precisão e adaptar o conteúdo automaticamente ao tamanho da tela — ideal para galerias de imagens.
+O **CSS Grid Layout** é uma das ferramentas mais poderosas e flexíveis para criar layouts responsivos e organizados. Ele permite dividir o espaço em linhas e colunas, posicionar elementos com precisão e adaptar o conteúdo automaticamente ao tamanho da tela, ideal para galerias de imagens.
 
 ---
 

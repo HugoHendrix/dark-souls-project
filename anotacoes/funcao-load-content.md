@@ -1,4 +1,4 @@
-A função `loadContent(pageName)` é usada para **carregar dinamicamente conteúdo HTML** em uma área específica da página —
+A função `loadContent(pageName)` é usada para **carregar dinamicamente conteúdo HTML** em uma área específica da página.
 
 ---
 
@@ -48,7 +48,7 @@ Se `pageName` for `"sobre"`, o caminho será `conteudos/sobre.html`.
         throw new Error(`Erro ao carregar o conteúdo: ${response.statusText}`);
     }
 ```
-🔹 Verifica se a resposta foi bem-sucedida (`response.ok` é `true` para status 200–299).  
+🔹 Verifica se a resposta foi bem-sucedida (`response.ok` é `true` para status 200 a 299).  
 Se não for, lança um erro com uma mensagem personalizada.
 
 ---
