@@ -1,25 +1,57 @@
-function loadContent(pageName) {
-    const contentArea = document.getElementById('content-area');
-    const filePath = `conteudos/${pageName}.html`;
-    
-    fetch(filePath)
-.then(response => {
-    if (!response.ok) {
-        throw new Error(`Erro ao carregar o conteúdo: ${response.statusText}`);
-    }
-    return response.text();
-})
-.then(html => {
-    contentArea.innerHTML = html;
-    document.getElementById('nav-anchor').scrollIntoView({ behavior: 'smooth' });
+// ABAS DE CONTEÚDO
+// Todo o texto já está no HTML (indexável e sem requisições extras).
+// O JS só mostra um painel por vez; sem JS, todos ficam visíveis.
+const tablist = document.getElementById('nav-anchor');
+const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
 
-})
-.catch(error => {
-    console.error(error);
-    contentArea.innerHTML = '<p style="color: red; text-align: center; font-size: 20px;">Erro ao carregar o conteúdo.</p>';
-
-})
+function ativarAba(indice, { foco = false, atualizarHash = true } = {}) {
+  tabs.forEach((tab, i) => {
+    const ativa = i === indice;
+    tab.setAttribute('aria-selected', ativa);
+    tab.tabIndex = ativa ? 0 : -1;
+    panels[i].hidden = !ativa;
+  });
+  if (foco) tabs[indice].focus();
+  if (atualizarHash) history.replaceState(null, '', '#' + panels[indice].id);
 }
+
+function indiceDoHash() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  return panels.findIndex(painel => painel.id === id);
+}
+
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => ativarAba(i));
+  tab.addEventListener('keydown', e => {
+    const ultimo = tabs.length - 1;
+    const teclas = {
+      ArrowRight: i === ultimo ? 0 : i + 1,
+      ArrowDown: i === ultimo ? 0 : i + 1,
+      ArrowLeft: i === 0 ? ultimo : i - 1,
+      ArrowUp: i === 0 ? ultimo : i - 1,
+      Home: 0,
+      End: ultimo
+    };
+    if (e.key in teclas) {
+      e.preventDefault();
+      ativarAba(teclas[e.key], { foco: true });
+    }
+  });
+});
+
+window.addEventListener('hashchange', () => {
+  const i = indiceDoHash();
+  if (i >= 0) {
+    ativarAba(i, { atualizarHash: false });
+    tablist.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+tablist.hidden = false;
+const inicial = indiceDoHash();
+ativarAba(inicial >= 0 ? inicial : 0, { atualizarHash: false });
+if (inicial >= 0) tablist.scrollIntoView();
 
 // BOTAO DE VOLTAR AO TOPO
 

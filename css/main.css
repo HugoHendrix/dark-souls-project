@@ -491,3 +491,33 @@ textarea:focus {
     max-width: 94%;
   }
 }
+
+/* ABAS */
+[hidden] {
+  display: none !important;
+}
+
+.btn[role="tab"][aria-selected="true"] {
+  background-color: var(--color-link);
+  box-shadow: 0 0 0 2px var(--color-accent-gold);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+[role="tabpanel"]:focus-visible {
+  outline: 3px solid var(--color-accent-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .galeria-img {
+    transition: none;
+    animation: none;
+    opacity: 1;
+  }
+}

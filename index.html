@@ -80,40 +80,332 @@
             Souls, com foco no primeiro jogo da franquia. As informações foram compiladas de diversas fontes, incluindo
             análises aprofundadas da lore, websites oficiais e artigos da Wikipédia.</p>
 
-        <nav id="nav-anchor" class="nav-buttons">
-            <button onclick="loadContent('informacoes-do-jogo')" class="btn btn-padrao">Características do Jogo</button>
-            <button onclick="loadContent('lore')" class="btn btn-padrao">Um pouco da Lore - A História não
-                contada</button>
-            <button onclick="loadContent('folclore')" class="btn btn-padrao">Folclore e Mitologia em Dark Souls</button>
-            <button onclick="loadContent('filosofia-em-dark-souls')" class="btn btn-padrao">Filosofia em Dark
-                Souls</button>
+        <nav id="nav-anchor" class="nav-buttons" role="tablist" aria-label="Temas de Dark Souls" hidden>
+            <button type="button" role="tab" id="tab-informacoes-do-jogo" aria-controls="informacoes-do-jogo" aria-selected="false" tabindex="-1" class="btn btn-padrao">Características do Jogo</button>
+            <button type="button" role="tab" id="tab-lore" aria-controls="lore" aria-selected="false" tabindex="-1" class="btn btn-padrao">A Lore: a história não contada</button>
+            <button type="button" role="tab" id="tab-folclore" aria-controls="folclore" aria-selected="false" tabindex="-1" class="btn btn-padrao">Folclore e Mitologia</button>
+            <button type="button" role="tab" id="tab-filosofia-em-dark-souls" aria-controls="filosofia-em-dark-souls" aria-selected="false" tabindex="-1" class="btn btn-padrao">Filosofia em Dark Souls</button>
+            <button type="button" role="tab" id="tab-filosofia-transitoriedade" aria-controls="filosofia-transitoriedade" aria-selected="false" tabindex="-1" class="btn btn-padrao">A Filosofia da Transitoriedade</button>
         </nav>
 
         <main id="content-area">
-        </main>
+            <div id="informacoes-do-jogo" role="tabpanel" aria-labelledby="tab-informacoes-do-jogo" tabindex="0">
+<section class="container-fluid">
+        <div class="flex-row">
+            <div class="flex-item bg-blue">
+                <h3 class="titulo-destaque">Visão Geral da Franquia</h3>
+                <p>Dark Souls é uma aclamada série de RPG de ação e fantasia sombria, desenvolvida pela FromSoftware e publicada pela Bandai Namco Entertainment.</p>
+                <p>Criada por Hidetaka Miyazaki, a série é famosa por sua alta dificuldade e narrativa ambiental, onde a história é contada através de detalhes do cenário, descrições de itens e diálogos com NPCs, exigindo que o jogador “encontre pistas e ligue os pontos para entender a história ao invés de ser contada de forma mais tradicional, como cutscenes.” (Wikipédia).</p>
+                <p> Lançada em 2011, a série gerou duas continuações diretas, Dark Souls II (2014) e Dark Souls III (2016), e é considerada a “sucessora espiritual” de Demon's Souls e King's Field. A franquia vendeu mais de 35 milhões de cópias fora do Japão até 2023 (Wikipédia).</p>
+            </div>
+             <div class="flex-item bg-blue">
+                <h3 class="titulo-destaque">Características da Jogabilidade:</h3>
+                <ul>
+                
+                    <li><strong>Fogueiras (Bonfires)</strong>: Servem como checkpoints, recuperando vida e magia, mas com o custo de que “todos os inimigos reaparecem” Elas simbolizam “um momento fugaz de calor e calma” em um mundo sombrio (Bandai Namco Website).
+                    </li>
+                    <li><strong>Mecânica de Morte e Almas</strong>: Ao morrer, o jogador perde suas almas no local da morte. Se conseguir retornar ao local sem morrer novamente, pode recuperá-las. Isso “encoraja o jogador a não temer a morte, já que não perde progresso contanto que aprenda com os seus erros.” (Wikipédia).</li>
+                    <li><strong>Interação Online Única</strong>: Interação Online Única: Permite ver fantasmas de outros jogadores, mensagens de dicas ou avisos, e manchas de sangue que mostram como outros morreram. Há também modos cooperativos e PvP através de invasões (Bandai Namco Website).
+                    </li>
+                    <li><strong>Narrativa Oculta</strong>: A lore é intencionalmente fragmentada, como na vida real, onde “ninguém tem conhecimento de tudo que aconteceu e de tudo que está acontecendo e muito menos a menor obrigação de nos falar o que aconteceu e o que está acontecendo”. </li>
+                </ul>
+            </div>
+        </div>
+     </section>
+            </div>
+
+            <div id="lore" role="tabpanel" aria-labelledby="tab-lore" tabindex="0">
+<section class="container-fluid">
+    <div class="flex-row">
+        <div class="flex-item bg-dark">
+
+            <h3 class="titulo-destaque">A Lore de Dark Souls</h3>
+            <p>Dark Souls é uma franquia que se destaca por sua narrativa ambiental e fragmentada, onde grande parte da
+                história é revelada através do level design, descrições de itens e diálogos esparsos. Este briefing tem
+                como objetivo organizar os principais eventos, personagens e temas do primeiro jogo da série,
+                apresentando uma linha do tempo cronológica e destacando os conceitos mais importantes. A narrativa de
+                Dark Souls explora temas como imortalidade, sacrifício, o ciclo de eras e a natureza da humanidade,
+                incentivando o jogador a questionar as verdades impostas e a construir sua própria compreensão do mundo.
+
+            </p>
+
+            <h4>Recomendo este vídeo:</h4>
+            <p>A História NÃO contada de Dark Souls, por Kelnow </p>
+            <p>O vídeo explora a lore de Dark Souls, destacando como a narrativa é contada de forma fragmentada e
+                ambiental, e como o jogador deve juntar as peças para entender a história. Kelnow analisa os principais
+                eventos, personagens e temas do jogo, oferecendo uma visão abrangente da complexa narrativa que permeia
+                o universo de Dark Souls.</p>
+
+            <iframe width="70%" height="375" src="https://www.youtube.com/embed/I4OB36SQjIA?si=405rfdfo4HeS_zsX "
+                style="border-radius: 8px; display: block; margin: 0 auto;" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-
-
-    </section>
-
-    <!-- DIVISOR MADEIRA -->
-    <div class="divisor">
-        <img src="assets/images/divisor-madeira.webp" loading="lazy" alt="" width="100%" height="40" aria-hidden="true">
+        </div>
     </div>
+</section>
+            </div>
 
-    <!-- PARALLAX IMAGEM 1 -->
-    <div class="parallax imagem-parallax-bonfire"></div>
+            <div id="folclore" role="tabpanel" aria-labelledby="tab-folclore" tabindex="0">
+<section class="container-fluid">
+    <h3 class="titulo-destaque">Ligações Folclóricas em Dark Souls</h3>
 
-    <!-- DIVISOR MADEIRA -->
-    <div class="divisor">
-        <img src="assets/images/divisor-madeira.webp" loading="lazy" alt="" width="100%" height="40" aria-hidden="true">
+    <p>Dark Souls é uma obra que combina um design de mundo labiríntico com mitos ancestrais, criando uma
+        narrativa silenciosa que ressoa com lendas reais. Cada elemento (dos dragões imortais às serpentes
+        primordiais) reflete arquétipos folclóricos de diversas culturas.</p>
+
+    <div class="flex-row">
+        <div class="flex-item">
+            <h4>Era dos Ancestrais e Guerra contra os Dragões</h4>
+            <p>Neste princípio, o mundo existia em brumas, rochas cinzentas e Dragões Eternos. A chegada da Primeira
+                Chama trouxe dualidades e as Almas de Lorde, dando origem a:</p>
+            <ul>
+                <li>Nito, o primeiro dos Mortos</li>
+                <li>A Bruxa de Izalith e as Filhas do Caos</li>
+                <li>Gwyn, o Senhor da Luz Solar, e seus Cavaleiros</li>
+                <li>O furtivo Pigmeu, portador da Dark Soul</li>
+            </ul>
+            <p>Esses quatro desafiaram os dragões imortais, cujas escamas os tornavam invencíveis.</p>
+            <strong>
+                <p>Conexão folclórica:</p>
+            </strong>
+            <ul>
+                <li>Titanomaquia (Mitologia Grega): assim como Zeus liderou os Olimpianos contra os Titãs, Gwyn encabeça
+                    a rebelião contra um panteão dracônico.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/ancestral-dragon.webp" alt="Imagem representando o dragão ancestral" class="img-folclore" loading="lazy">
+        </div>
+
+        <div class="flex-item">
+            <h4>O Ciclo das Eras e o Medo de Gwyn</h4>
+            <p>Com o fim da Era dos Ancestrais, surge a Era do Fogo. A serpente Frampt revela a Gwyn que a chama se
+                extinguirá, dando lugar a um período de escuridão dominado pelos humanos.</p>
+            <p>Em pânico, Gwyn sacrifica sua alma e a de seus seguidores para reacender a chama, marcando a humanidade
+                com o Darksign e condenando-a à imortalidade trágica dos Hollows.</p>
+            <strong>
+                <p>Conexão folclórica:</p>
+            </strong>
+            <ul>
+                <li>Odin e o Ragnarök (Mitologia Nórdica): o temor de Gwyn pelo fim do mundo ecoa o receio de Odin
+                    diante da profecia do Ragnarök.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/odin.webp" alt="Imagem representando o Deus nortico Odin" class="img-folclore" loading="lazy">
+        </div>
+
+        <div class="flex-item">
+            <h4>Simbolismo Ambiental e Arquitetônico</h4>
+            <p>Dark Souls costura mitos em pedra e natureza:</p>
+            <ul>
+                <li>Árvores Antigas e Yggdrasil: gigantescas árvores com casca de pedra, lembrando a árvore do mundo
+                    nórdica, elo entre reinos.</li>
+                <li>Ash Lake: um santuário primordial que sugere uma viagem no tempo ao passado do planeta.</li>
+                <li>Arquitetura Gótica, Românica e Angkoriana: catedrais verticais, vitrais e estruturas bizarras evocam
+                    mosteiros medievais e templos do Sudeste Asiático.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/yggdrasil.webp" alt="Arvore da Vida" class="img-folclore" loading="lazy">
+        </div>
+
+        <div class="flex-item">
+            <h4>Paralelos Familiares e Mitologias</h4>
+            <p>A linhagem de Gwyn espelha divindades de diferentes panteões:</p>
+            <ul>
+                <li>Gwynevere e Amaterasu (Mitologia Japonesa): ambas deusas solares e figuras maternas cujo exílio
+                    priva o mundo de luz.</li>
+                <li>Gwyndolin e Tsukuyomi: deuses lunares que atuam nas sombras, manipulando destino e ilusão.</li>
+                <li>Nameless King e Susanoo: guerreiros tempestivos que dominaram relâmpagos após derrotar criaturas
+                    dracônicas.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/amaterasu.webp" alt="Deusa da Mitologia Japonesa" class="img-folclore" loading="lazy">
+        </div>
+
+        <div class="flex-item">
+            <h4>Simbolismo Alquímico</h4>
+            <p>O ciclo de criação e destruição em Dark Souls lembra o Ouroboros:</p>
+            <ul>
+                <li>Kingseeker Frampt vs. Darkstalker Kaathe: serpentes primordialmente opostas, representando criação e
+                    decadência no ciclo eterno.</li>
+                <li>O jogador como matéria-prima: cada morte e renascimento aproxima o aventureiro de sua “transmutação”
+                    final, forjada pela chama.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/frampt.webp" alt="Serpente primordial Frampt" class="img-folclore" loading="lazy">
+        </div>
+
+        <div class="flex-item">
+            <h4>Velka, Deusa do Pecado</h4>
+            <p>Velka é a entidade sombria da justiça e do pecado, exilada em Anor Londo.</p>
+            <strong>
+                <p>Conexão folclórica:</p>
+            </strong>
+            <ul>
+                <li>Morrigan (Mitologia Celta): deusa da guerra e destino, frequentemente associada a corvos e julgadora
+                    de almas.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/velka.webp" alt="Imagem representando a Velka, Deusa do pecado" class="img-folclore" loading="lazy">
+        </div>
+
+        <div class="flex-item">
+            <h4>Abismo, Novas Eras e Profundezas</h4>
+            <ul>
+                <li>As Filhas do Abismo (Dark Souls 2): fragmentos emocionais de Manus que encarnam seu desespero
+                    primordial.</li>
+                <li>Aldrich e o Mar Profundo: visões de um mundo submerso, ecoando o destino pós-Ragnarök.</li>
+                <li>Um Novo Mundo de Cinzas (DLC DS3): a pintora busca o sangue de Gael para criar um mundo renovado,
+                    semelhante à reconstrução de um universo após o fim dos deuses.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/aldrich.webp" alt="Imagem representando o lord das cinzas Aldrich" class="img-folclore" loading="lazy">
+        </div>
+
+
+        <div class="flex-item">
+            <h4>Filianore e o Ovo</h4>
+            <p>Filianore repousa em sono mágico, protegendo o último elo entre humanos e deuses. Seu ovo simboliza a
+                continuidade do tempo.</p>
+            <strong>
+                <p>Conexão folclórica:</p>
+            </strong>
+            <ul>
+                <li>Angels’ Egg (Anime): tema de fé e guardiã de um enigma que pode decretar o fim de tudo.</li>
+            </ul>
+            <br>
+            <img src="assets/images/folclore-mitologia/filianore.webp" alt="Imagem representando Filianore e o Ovo" class="img-folclore" loading="lazy">
+        </div>
     </div>
+</section>
+            </div>
 
-    <!-- CONTEUDO PARALLAX BONFIRE -->
-    <div class="content">
-        <article>
-            <h3 id="filosofia-transitoriedade" class="titulo-destaque">A Filosofia da Transitoriedade em Dark Souls</h3>
+            <div id="filosofia-em-dark-souls" role="tabpanel" aria-labelledby="tab-filosofia-em-dark-souls" tabindex="0">
+<section class="container-fluid">
+
+    <h3 class="titulo-destaque">Filosofia em Dark Souls</h3>
+        <p>Dark Souls é uma verdadeira tapeçaria filosófica, e suas ideias ecoam pensamentos de diversos filósofos ao
+            longo da história, especialmente aqueles que lidam com temas como morte, repetição, sofrimento, identidade
+            e sentido.</p>
+            
+    <div class="flex-row">
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Martin Heidegger: Ser e Morte</strong></h4>
+            
+            <div >
+                <ul>
+                    <li>Via a morte como a única certeza da existência, e acreditava que encará-la nos leva a uma vida
+                        mais autêntica.</li>
+                    <li>Em Dark Souls, o jogador é confrontado constantemente com a morte, e só ao aceitá-la como parte
+                        do processo é que pode evoluir.</li>
+                    <li>A ideia de “ser-para-a-morte” se manifesta na jornada do personagem, que só encontra sentido ao
+                        reconhecer sua finitude.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/martin-heidegger.webp" alt="Imagem do filósofo Martin Heidegger" class="img-filosofos" loading="lazy" title="Para Heidegger, a morte não é um evento futuro a ser temido, mas uma possibilidade sempre presente que define a própria estrutura do ser humano. ">
+        </div>
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Friedrich Nietzsche: Eterno Retorno e Superação</strong></h4>
+            <div >
+                <ul>
+                    <li>O conceito do eterno retorno ressoa com o ciclo das eras e a repetição de mortes no jogo.</li>
+                    <li>Propõe o ideal do Übermensch, aquele que transcende sofrimento e valores herdados.</li>
+                    <li>O jogador, ao persistir e se transformar, encarna essa superação.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/friedrich-nietzsche.webp" alt="Imagem do filósofo Friedrich Nietzsche" class="img-filosofos" loading="lazy" title="O conceito de eterno retorno em Nietzsche sugere que cada momento da vida, com seus prazeres e dores, se repetirá eternamente.">
+        </div>
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Heráclito: Fluxo e Mudança</strong></h4>
+            <div >
+                <ul>
+                    <li>“Tudo flui, nada permanece.”</li>
+                    <li>Dark Souls reforça essa ideia ao mostrar que tentar congelar uma era leva à ruína.</li>
+                    <li>A chama que nasce, cresce e se apaga é uma metáfora perfeita para o fluxo heraclitiano.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/heraclito.webp" alt="Imagem do filósofo Heráclito" class="img-filosofos" loading="lazy" title="Ele acreditava que a mudança é impulsionada pela interação e conflito entre opostos, como quente e frio, claro e escuro. 
+">
+        </div>
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Søren Kierkegaard: Escolha, Angústia e Fé</strong></h4>
+            <div >
+                <ul>
+                    <li>Explora a angústia existencial diante da liberdade de escolha.</li>
+                    <li>O jogador deve decidir entre perpetuar a Era do Fogo ou iniciar a Era da Escuridão.</li>
+                    <li>A fé é um salto no desconhecido, como confiar em uma mensagem deixada por outro jogador.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/soren-kierkegaard.webp" alt="Imagem do filosofo Søren Kierkegaard" class="img-filosofos" loading="lazy" title="Para ele, a liberdade de escolha traz consigo a angústia, pois o indivíduo se vê diante de infinitas possibilidades, sem um caminho predefinido.">
+        </div>
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Simone de Beauvoir: Imortalidade e Sentido</strong></h4>
+            <div >
+                <ul>
+                    <li>Argumenta que a imortalidade pode esvaziar a vida.</li>
+                    <li>Em Dark Souls, os imortais são figuras trágicas, presos em eras que já deveriam ter terminado.
+                    </li>
+                    <li>A maldição da imortalidade é apresentada como um fardo.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/simone-de-beauvoir.webp" alt="imagem da filosofa Simone de Beauvoir" class="img-filosofos" loading="lazy" title=" A imortalidade, neste contexto, não é vista como um presente, mas sim como uma maldição, pois leva à perda do sentido da vida e à indiferença diante da finitude">
+        </div>
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Carl Jung: Arquétipos e Individuação</strong></h4>
+            <div >
+                <ul>
+                    <li>Via os mitos como expressões do inconsciente coletivo.</li>
+                    <li>Dark Souls é repleto de arquétipos: o herói, o sábio, o traidor, o rei caído.</li>
+                    <li>O jogador passa por sua própria jornada de individuação.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/carl-jung.webp" alt="Imagem do filosofo Carl Jung" class="img-filosofos" loading="lazy" title="Carl Jung, um psicólogo suíço, desenvolveu a teoria dos arquétipos e do processo de individuação, conceitos centrais em sua psicologia analítica.">
+        </div>
+
+        <div class="flex-item bg-blue-brown">
+            <h4><strong>Albert Camus: O Absurdo e a Rebelião</strong></h4>
+            <div >
+                <ul>
+                    <li>Via a vida como absurda, sem sentido intrínseco.</li>
+                    <li>A resposta é a rebelião lúcida: viver com dignidade mesmo diante do vazio.</li>
+                    <li>O jogador é como Sísifo, condenado a repetir, mas encontrando valor na própria luta.</li>
+                </ul>
+            </div>
+            <br>
+            <img src="assets/images/filosofos-ds/albert-camus.webp" alt="Imagem do filosofo Albert Camus" class="img-filosofos" loading="lazy" title="Em sua filosofia, Albert Camus explora a relação entre o absurdo e a revolta como respostas à condição humana">
+        </div>
+
+         <div class="flex-item bg-dark">
+         <h4><strong>Conclusão</strong></h4>
+        <p>Dark Souls é uma experiência que convida à reflexão profunda. Ele não apenas entretém: ele confronta. E ao fazer isso, se conecta com tradições filosóficas que vão do existencialismo ao estoicismo, da alquimia à fenomenologia.</p>
+        <img src="assets/images/filosofos-ds/bonfire.webp" class="img-filosofos" loading="lazy" alt="Bonfire">
+    </div>
+    </div>
+   
+   
+   
+
+
+</section>
+            </div>
+
+            <div id="filosofia-transitoriedade" role="tabpanel" aria-labelledby="tab-filosofia-transitoriedade" tabindex="0">
+<div class="content">
+<article>
+            <h3 class="titulo-destaque">A Filosofia da Transitoriedade em Dark Souls</h3>
             <h4>Quando a Resistência ao Fim Gera o Sofrimento</h4>
 
             <p>Dark Souls constrói sua narrativa sobre uma verdade implacável: tentar prolongar o
@@ -208,15 +500,22 @@
 
 
         </article>
-    </div>
+</div>
+            </div>
+        </main>
+
+
+
+
+    </section>
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
         <img src="assets/images/divisor-madeira.webp" loading="lazy" alt="" width="100%" height="40" aria-hidden="true">
     </div>
 
-    <!-- PARALLAX IMAGEM ANOR LONDO -->
-    <div class="parallax imagem-parallax-anor-londo"></div>
+    <!-- PARALLAX IMAGEM 1 -->
+    <div class="parallax imagem-parallax-bonfire"></div>
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
@@ -290,6 +589,14 @@
         </div>
 
     </div>
+
+    <!-- DIVISOR MADEIRA -->
+    <div class="divisor">
+        <img src="assets/images/divisor-madeira.webp" loading="lazy" alt="" width="100%" height="40" aria-hidden="true">
+    </div>
+
+    <!-- PARALLAX IMAGEM ANOR LONDO -->
+    <div class="parallax imagem-parallax-anor-londo"></div>
 
     <!-- DIVISOR MADEIRA -->
     <div class="divisor">
