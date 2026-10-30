@@ -330,91 +330,6 @@ figure {
 }
 
 
-/* Reset básico */
-form, input, textarea, button, label, fieldset, legend {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  box-sizing: border-box;
-}
-
-.form-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex: 3 1 60% ;
-}
-
-/* Container do formulário */
-form {
-  max-width: 800px;
-  width: 100%;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #dddbdb;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Agrupamento de campos */
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-legend {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-/* Campos */
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #444;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--color-link);
-  border-radius: 4px;
-  background-color: #ebe8e8;
-  transition: border-color 0.3s ease;
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--color-accent-gold);
-  outline: none;
-}
-
-
-/* Honeypot invisível */
-[aria-hidden="true"] {
-  position: absolute;
-  left: -9999px;
-}
-
-.contorno-personagem {
-  filter: drop-shadow(0px 0px 5px #fffb009c);
-  /* 0px 0px: sem deslocamento
-     5px: o tamanho da sombra (que vira a borda)
-     #0000ff: a cor da borda
-  */
-}
-
-
-
-
-
-
 @media (max-width: 768px) {
   .parallax {
     background-attachment: scroll;
@@ -451,14 +366,6 @@ textarea:focus {
 
   .nav-buttons {
     flex-direction: column;
-  }
-
-  form {
-    padding: 1.25rem;
-  }
-
-  .form-container img {
-    max-width: 60%;
   }
 
   #back-to-top {
@@ -520,4 +427,59 @@ a:focus-visible,
     animation: none;
     opacity: 1;
   }
+}
+
+/* Botões do modal e aviso */
+.fechar,
+.seta {
+  background: none;
+  border: none;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.galeria-img:focus-visible {
+  outline: 3px solid var(--color-accent-gold);
+  outline-offset: 3px;
+}
+
+#back-to-top {
+  background: none;
+  padding: 0;
+}
+
+.aviso-fa {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  text-indent: 0;
+  color: var(--color-text-muted);
+  background-color: var(--color-bg-primary);
+}
+
+/* Sobre o projeto */
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.links-projeto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.lista-projeto {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.lista-projeto li {
+  margin-bottom: 0.5rem;
+}
+
+.lista-projeto a {
+  color: var(--color-accent-gold);
 }

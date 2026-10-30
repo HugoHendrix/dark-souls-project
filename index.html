@@ -63,7 +63,7 @@
             <ul class="nav-list">
                 <li><a href="#filosofia-transitoriedade">A Filosofia da Transitoriedade</a></li>
                 <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre-o-projeto">Sobre o projeto</a></li>
             </ul>
         </nav>
     </header>
@@ -581,11 +581,11 @@
         </section>
 
         <!-- Modal -->
-        <div id="modal" class="modal">
-            <span class="fechar">&times;</span>
-            <span class="seta seta-esquerda">&#10094;</span>
-            <span class="seta seta-direita">&#10095;</span>
-            <img class="modal-conteudo" id="img-modal">
+        <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+            <button type="button" class="fechar" aria-label="Fechar imagem">&times;</button>
+            <button type="button" class="seta seta-esquerda" aria-label="Imagem anterior">&#10094;</button>
+            <button type="button" class="seta seta-direita" aria-label="Próxima imagem">&#10095;</button>
+            <img class="modal-conteudo" id="img-modal" alt="">
         </div>
 
     </div>
@@ -603,45 +603,44 @@
         <img src="assets/images/divisor-madeira.webp" loading="lazy" alt="" width="100%" height="40" aria-hidden="true">
     </div>
 
-    <!-- FORM CONTATO -->
-    <section class="container-fluid bg-map">
+    <!-- SOBRE O PROJETO -->
+    <section class="container-fluid bg-map" id="sobre-o-projeto">
         <div class="flex-row">
             <div class="flex-item bg-blue-brown">
-                <h3 id="contato" class="titulo-destaque">Contato</h3>
-                <p>Toda jornada é feita de encontros. Se deseja falar conosco, seja para discutir a maldição, os Lordes
-                    ou os segredos do Abismo, envie sua mensagem. Que ela atravesse os véus do tempo e chegue até nós.
-                </p>
-                <div class="form-container">
-                    <form id="form-contato" action="https://formspree.io/f/xzzvykrp" method="POST">
-                        <fieldset>
-                            <legend id="contato-titulo">Formulário de Contato</legend>
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required autocomplete="name">
-
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" required autocomplete="email">
-
-                            <label for="mensagem">Mensagem:</label>
-                            <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
-
-                            <!-- Honeypot -->
-                            <div style="position: absolute; left: -9999px;" aria-hidden="true">
-                                <label for="website">Se você for humano, deixe este campo vazio</label>
-                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
-                            </div>
-
-                            <button type="submit" class="btn btn-padrao">Enviar</button>
-                        </fieldset>
-                    </form>
-                    <img class="contorno-personagem" src="./assets/images/form-feature.webp" alt="">
+                <h3 class="titulo-destaque">Sobre o projeto</h3>
+                <p>O Dark Souls Project é um site de fã criado para estudar e praticar front-end. A ideia foi reunir em
+                    uma página só os principais temas do primeiro jogo (características, lore, folclore e filosofia) e,
+                    ao mesmo tempo, treinar boas práticas de desenvolvimento.</p>
+                <ul class="lista-projeto">
+                    <li>Layout responsivo com Flexbox e Grid.</li>
+                    <li>Abas e galeria acessíveis pelo teclado.</li>
+                    <li>Imagens em WebP e carregamento preguiçoso.</li>
+                    <li>SEO básico e compartilhamento em redes sociais.</li>
+                </ul>
+                <p>Desenvolvido por Hugo Hendrix com HTML, CSS e JavaScript puros.</p>
+                <div class="links-projeto">
+                    <a class="btn btn-padrao" href="https://github.com/HugoHendrix/dark-souls-project" target="_blank" rel="noopener noreferrer">Ver o código no GitHub</a>
+                    <a class="btn btn-padrao" href="https://github.com/HugoHendrix/dark-souls-project/tree/main/anotacoes" target="_blank" rel="noopener noreferrer">Anotações de estudo</a>
+                    <a class="btn btn-padrao" href="https://hugohendrix.github.io/portfolio-hugo/" target="_blank" rel="noopener noreferrer">Meu portfólio</a>
+                    <a class="btn btn-padrao" href="https://www.linkedin.com/in/hugohendrix/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
+            </div>
+            <div class="flex-item bg-blue-brown" id="creditos">
+                <h3 class="titulo-destaque">Fontes e créditos</h3>
+                <p>As informações do site foram compiladas a partir de:</p>
+                <ul class="lista-projeto">
+                    <li><a href="https://pt.wikipedia.org/wiki/Dark_Souls" target="_blank" rel="noopener noreferrer">Wikipédia: artigo sobre Dark Souls</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=I4OB36SQjIA" target="_blank" rel="noopener noreferrer">A História NÃO contada de Dark Souls</a>, do canal Kelnow</li>
+                    <li>Análises da lore e sites oficiais da franquia.</li>
+                </ul>
+                <p>Dark Souls, seus personagens, logotipos e as imagens do jogo são propriedade da FromSoftware e da
+                    Bandai Namco, usados aqui sem fins lucrativos. Este é um projeto de fã, sem vínculo com as empresas.</p>
             </div>
         </div>
     </section>
 
     <!-- BOTÃO DE VOLTA AO TOPO -->
-    <button id="back-to-top" title="Voltar ao topo"><img src="assets/images/osso-do-regresso.webp" loading="lazy"
-            alt="Imagem do item Osso do Regresso, esse item serve para deslocar o jogador até última fogueira em que ele descansou.">
+    <button id="back-to-top" type="button" title="Voltar ao topo" aria-label="Voltar ao topo"><img src="assets/images/osso-do-regresso.webp" loading="lazy" alt="">
     </button>
 
     <!-- DIVISOR MADEIRA -->
@@ -658,7 +657,7 @@
                 <ul>
                     <li><a href="#filosofia-transitoriedade">A Filosofia da Transitoriedade</a></li>
                     <li><a href="#galeria">Galeria</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre-o-projeto">Sobre o projeto</a></li>
                 </ul>
             </div>
             <div class="container-footer">
@@ -670,6 +669,8 @@
                 </ul>
             </div>
     </footer>
+
+    <p class="aviso-fa">Projeto de fã, sem fins lucrativos e sem vínculo com a FromSoftware ou a Bandai Namco. Dark Souls, seus personagens e as imagens do jogo pertencem aos seus respectivos donos.</p>
 
 
 

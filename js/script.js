@@ -53,82 +53,87 @@ const inicial = indiceDoHash();
 ativarAba(inicial >= 0 ? inicial : 0, { atualizarHash: false });
 if (inicial >= 0) tablist.scrollIntoView();
 
-// BOTAO DE VOLTAR AO TOPO
-
-// Obtenha o botão
+// BOTÃO DE VOLTAR AO TOPO
 const backToTopButton = document.getElementById("back-to-top");
 
-// Mostrar ou esconder o botão com base na rolagem
-window.onscroll = function () {
-    if (window.scrollY > 300) { // Mostra após 300px de rolagem
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
-    }
-};
+window.addEventListener("scroll", () => {
+  backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
+});
 
-// Rolar para o topo quando o botão for clicado
-backToTopButton.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Suaviza o movimento
-    });
-};
-
-
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 // GALERIA
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("img-modal");
-const fechar = document.querySelector(".fechar");
-const imagens = document.querySelectorAll(".galeria-img");
-const setaEsquerda = document.querySelector(".seta-esquerda");
-const setaDireita = document.querySelector(".seta-direita");
+const fechar = modal.querySelector(".fechar");
+const setaEsquerda = modal.querySelector(".seta-esquerda");
+const setaDireita = modal.querySelector(".seta-direita");
+const imagens = Array.from(document.querySelectorAll(".galeria-img"));
 
 let indiceAtual = 0;
+let ultimoFocado = null;
+
+function mostrarImagem(indice) {
+  indiceAtual = (indice + imagens.length) % imagens.length;
+  modalImg.src = imagens[indiceAtual].currentSrc || imagens[indiceAtual].src;
+  modalImg.alt = imagens[indiceAtual].alt;
+}
 
 function abrirModal(indice) {
+  ultimoFocado = document.activeElement;
+  mostrarImagem(indice);
   modal.style.display = "block";
-  modalImg.src = imagens[indice].src;
-  modalImg.alt = imagens[indice].alt;
-  indiceAtual = indice;
+  document.body.style.overflow = "hidden";
+  fechar.focus();
+}
+
+function fecharModal() {
+  modal.style.display = "none";
+  document.body.style.overflow = "";
+  if (ultimoFocado) ultimoFocado.focus();
 }
 
 imagens.forEach((img, i) => {
+  img.tabIndex = 0;
+  img.setAttribute("role", "button");
+  img.setAttribute("aria-label", "Ampliar imagem: " + img.alt);
   img.addEventListener("click", () => abrirModal(i));
+  img.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      abrirModal(i);
+    }
+  });
 });
 
-fechar.addEventListener("click", () => {
-  modal.style.display = "none";
+fechar.addEventListener("click", fecharModal);
+setaDireita.addEventListener("click", () => mostrarImagem(indiceAtual + 1));
+setaEsquerda.addEventListener("click", () => mostrarImagem(indiceAtual - 1));
+
+modal.addEventListener("click", e => {
+  if (e.target === modal) fecharModal();
 });
 
-window.addEventListener("click", e => {
-  if (e.target === modal) {
-    modal.style.display = "none";
+document.addEventListener("keydown", e => {
+  if (modal.style.display !== "block") return;
+
+  if (e.key === "Escape") fecharModal();
+  if (e.key === "ArrowRight") mostrarImagem(indiceAtual + 1);
+  if (e.key === "ArrowLeft") mostrarImagem(indiceAtual - 1);
+
+  // mantém o foco dentro do modal
+  if (e.key === "Tab") {
+    const focaveis = [fechar, setaEsquerda, setaDireita];
+    const primeiro = focaveis[0];
+    const ultimo = focaveis[focaveis.length - 1];
+    if (e.shiftKey && document.activeElement === primeiro) {
+      e.preventDefault();
+      ultimo.focus();
+    } else if (!e.shiftKey && document.activeElement === ultimo) {
+      e.preventDefault();
+      primeiro.focus();
+    }
   }
 });
-
-setaDireita.addEventListener("click", () => {
-  indiceAtual = (indiceAtual + 1) % imagens.length;
-  abrirModal(indiceAtual);
-});
-
-setaEsquerda.addEventListener("click", () => {
-  indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
-  abrirModal(indiceAtual);
-});
-
-
-// TESTE DE FORMULÁRIO
-
-// fetch("https://formspree.io/f/xzzvykrp", {
-//   method:"POST",
-//   headers: {"content-Type": "application;json"},
-//   body: JSON.stringify({
-//     nome:"Hugo",
-//     email:"hugohendrixc@gmail.com",
-//     mensagem: "OLÁ"
-//   })
-// });
-
-

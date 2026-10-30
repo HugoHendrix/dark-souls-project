@@ -1,50 +1,58 @@
-![Logo de Dark Souls](assets/images/logo/logo-ds.webp)
+# Dark Souls Project
 
-# **Dark Souls**
+Site de fã sobre **Dark Souls** (primeiro jogo da franquia), criado para praticar HTML, CSS e JavaScript com foco em layout responsivo, acessibilidade e desempenho.
 
-## **Visão Geral**
+**Ver online:** https://hugohendrix.github.io/dark-souls-project/
 
-**Dark Souls** é um aclamado **RPG de Ação** e fantasia sombria desenvolvido pela **FromSoftware**. Lançado em 2011, ele se tornou um marco na indústria de videogames, popularizando o gênero "Soulslike" e influenciando inúmeros jogos.
+![Captura de tela do Dark Souls Project](docs/captura-de-tela.jpg)
 
-O jogo transporta você para o desolado reino de **Lordran**, um mundo vasto, vertical e interconectado. A narrativa é propositalmente misteriosa e não linear, contada através de descrições de itens, diálogos enigmáticos e, principalmente, pelo próprio ambiente. O lema é claro: **"Prepare-se para morrer"**.
+## O que o site tem
 
----
+- **5 abas de conteúdo:** características do jogo, lore, folclore e mitologia, filosofia em Dark Souls e a filosofia da transitoriedade.
+- **Galeria de imagens** com visualização ampliada, navegação por setas e fechamento com a tecla Esc.
+- **Seção "Sobre o projeto"** com fontes e créditos e links para o código e o portfólio, além de botão de voltar ao topo e efeito parallax.
+- **Visual sombrio** com paleta própria e fontes góticas (EB Garamond, MedievalSharp, Pirata One e UnifrakturCook).
 
-## **Gameplay e Dificuldade**
+## Decisões técnicas
 
-**Dark Souls** é famoso por sua dificuldade implacável, mas recompensadora. A morte é parte fundamental da experiência, não um fracasso.
+- **Abas acessíveis (ARIA):** todo o texto já está no HTML e o JavaScript mostra um painel por vez. Funciona com teclado (setas, Home e End), cada aba tem um endereço próprio (`#lore`, `#folclore`) e, sem JavaScript, todo o conteúdo fica visível.
+- **Responsivo:** testado a partir de 375 px de largura, sem rolagem lateral.
+- **Desempenho:** imagens em WebP, carregamento preguiçoso (`loading="lazy"`) e sem bibliotecas externas além das fontes.
+- **SEO:** título e descrição próprios, Open Graph, Twitter Card, `canonical`, `robots.txt` e `sitemap.xml`.
 
-* **Progressão Através da Morte:** Ao morrer, você perde suas almas (que servem como XP e moeda) e retorna à última **Fogueira** descansada.
-* **Recuperação de Almas:** Suas almas perdidas criam uma **Mancha de Sangue** no local da morte. Se você conseguir alcançá-la sem morrer novamente, pode recuperá-las.
-* **Fogueiras:** Funcionam como checkpoints, restaurando sua vida e recursos, mas também reaparecendo a maioria dos inimigos. Elas são um raro momento de alívio e reflexão em um mundo sombrio.
-* **Domínio e Personalização:** O sucesso depende do seu domínio sobre o combate e da sua estratégia. Há uma vasta gama de armas, armaduras e magias para criar um personagem único.
+## Tecnologias
 
----
+HTML5, CSS3 (variáveis, Flexbox e Grid) e JavaScript puro.
 
-## **Interações Online**
+## Como rodar
 
-Embora a jornada seja solitária, **Dark Souls** integra elementos online de forma inovadora para conectar os jogadores:
+Não há etapa de build. Abra o `index.html` no navegador ou, se preferir um servidor local:
 
-* **Fantasmas:** Veja as ações e os locais de morte de outros jogadores como fantasmas, que podem ser uma dica ou uma armadilha.
-* **Mensagens:** Deixe mensagens no chão para ajudar (ou enganar!) outros aventureiros.
-* **Multijogador:** Invoque outros jogadores para **cooperação** em chefes ou invada mundos alheios para um intenso **PvP** (Jogador contra Jogador).
-* **Pactos:** Una-se a facções que aprofundam a experiência multiplayer.
+```bash
+python -m http.server 8000
+```
 
----
+Depois acesse http://localhost:8000.
 
-## **Lore e Temas Centrais**
+## Estrutura
 
-O mundo de **Dark Souls** é uma fantasia sombria medieval com uma história cíclica e complexa sobre o fogo, o sacrifício e o desespero.
+```
+index.html      página única com as abas, a galeria e a seção sobre o projeto
+css/            reset, estilos principais, cabeçalho e rodapé
+js/script.js    abas, galeria e botão de voltar ao topo
+assets/         imagens (WebP) e ícones
+anotacoes/      anotações de estudo feitas durante o projeto
+docs/           captura de tela e o texto sobre o jogo
+```
 
-A narrativa gira em torno da **Primeira Chama**, que trouxe a disparidade ao mundo. Sua missão, como o **"Morto-Vivo Escolhido"**, é decidir se vai reacender essa chama e prolongar a **Era do Fogo** ou deixá-la apagar para dar início à **Era da Escuridão**.
+## Anotações de estudo
 
-A **solitude** é um tema central, não como solidão, mas como um caminho de autoconhecimento. Sua jornada silenciosa e implacável é o que te força a confrontar seus próprios limites e se desenvolver.
+Na pasta [`anotacoes/`](anotacoes/) estão as notas que escrevi enquanto desenvolvia: Flexbox, Grid, parallax, formulários, meta tags, otimização de imagens e outras. Algumas descrevem decisões antigas do projeto, como o carregamento do conteúdo com `fetch`, que foi substituído pelas abas acessíveis.
 
----
+## Aviso
 
-## **Legado**
+Projeto de fã, sem fins lucrativos e sem vínculo com a FromSoftware ou a Bandai Namco. Dark Souls, seus personagens e as imagens do jogo pertencem aos seus respectivos donos.
 
-* **Reconhecimento:** **Dark Souls** foi aclamado pela crítica, com uma nota de **89 no Metacritic**. É considerado um dos melhores jogos de todos os tempos.
-* **Vendas:** A série já vendeu mais de **35 milhões de cópias**.
+## Autor
 
----
+**Hugo Hendrix** · [Portfólio](https://hugohendrix.github.io/portfolio-hugo/) · [LinkedIn](https://www.linkedin.com/in/hugohendrix/) · [GitHub](https://github.com/HugoHendrix)
