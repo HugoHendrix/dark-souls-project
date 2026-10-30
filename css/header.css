@@ -1,5 +1,6 @@
-header { 
+header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     
@@ -21,7 +22,9 @@ header {
 
 .nav-list {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 2rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -42,4 +45,23 @@ header {
 
 .divisor { 
     margin-top: -5px;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    header > a img {
+        max-width: 220px;
+        height: auto;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem 1rem;
+    }
+
+    .nav-list li a {
+        font-size: 1.25rem;
+    }
 }

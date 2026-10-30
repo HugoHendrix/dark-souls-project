@@ -71,12 +71,13 @@ p {
 
 h1 {
   text-align: center;
-  font-size: 4rem;
+  font-size: clamp(2.2rem, 8vw, 4rem);
 }
 
 p.mensagem-bem-vindo {
   font-size: 1.6rem;
-  width: 92ch;
+  width: 100%;
+  max-width: 92ch;
   margin: 0 auto 30px auto;
 }
 
@@ -95,8 +96,9 @@ ul li {
 
 .nav-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem 2rem;
 
 }
 
@@ -202,7 +204,7 @@ ul li {
 /* CONTEUDO DO PARALLAX */
 .content {
   padding: 50px;
-  background: var(var(--color-bg-primary));
+  background: var(--color-bg-primary);
   text-align: justify;
   word-wrap: break-word;
   width: 90%;
@@ -260,7 +262,7 @@ figure {
   
 }
 
-galeria-img:hover {
+.galeria-img:hover {
   transform: scale(1.05);
 }
 
@@ -338,13 +340,17 @@ form, input, textarea, button, label, fieldset, legend {
 
 .form-container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   flex: 3 1 60% ;
 }
 
 /* Container do formulário */
 form {
   max-width: 800px;
-  width: 620px;
+  width: 100%;
   margin: 2rem auto;
   padding: 2rem;
   background-color: #dddbdb;
@@ -412,5 +418,76 @@ textarea:focus {
 @media (max-width: 768px) {
   .parallax {
     background-attachment: scroll;
+  }
+
+  .container-fluid {
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .flex-item {
+    padding: 1.25rem;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  p.mensagem-bem-vindo {
+    font-size: 1.2rem;
+  }
+
+  h3.character-name {
+    font-size: 1.5rem;
+  }
+
+  .grid-galeria {
+    padding: 1rem 0;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 1.25rem;
+  }
+
+  .form-container img {
+    max-width: 60%;
+  }
+
+  #back-to-top {
+    width: 64px;
+    height: 64px;
+    padding: 0;
+  }
+
+  #back-to-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .fechar {
+    top: 10px;
+    right: 20px;
+    font-size: 44px;
+  }
+
+  .seta-esquerda {
+    left: 5px;
+  }
+
+  .seta-direita {
+    right: 5px;
+  }
+
+  .modal-conteudo {
+    max-width: 94%;
   }
 }
