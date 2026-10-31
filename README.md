@@ -47,7 +47,7 @@ docs/           captura de tela e o texto sobre o jogo
 
 ## Anotações de estudo
 
-Na pasta [`anotacoes/`](anotacoes/) estão as notas que escrevi enquanto desenvolvia: Flexbox, Grid, parallax, formulários, meta tags, otimização de imagens e outras. Algumas descrevem decisões antigas do projeto, como o carregamento do conteúdo com `fetch`, que foi substituído pelas abas acessíveis.
+As notas que escrevi enquanto desenvolvia estão na pasta [`anotacoes/`](anotacoes/) e, organizadas por tema, na [CodeWiki](https://hugohendrix.github.io/CodeWiki/projeto-dark-souls/README.html): Flexbox, Grid, parallax, formulários, meta tags, otimização de imagens e outras. Algumas descrevem decisões antigas do projeto, como o carregamento do conteúdo com `fetch`, que foi substituído pelas abas acessíveis.
 
 ## Aviso
 
